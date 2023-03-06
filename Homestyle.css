@@ -1,0 +1,32 @@
+header  {
+  display:flex;
+  flex-direction: row;
+  flex: auto;
+  background-image: url("Media/girl-wit-neon-sunglasses.jpg");
+  padding: 2% 5% 2% 5%;
+  position: absolute;
+  left: -0.025%;
+  right: -0.025%;
+  top: 0%;
+  bottom: -26.48%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover; 
+}
+
+.logo {
+  max-width: 700px;
+  height: 100px;
+}
+
+.nav {
+  overflow: hidden;
+}
+.nav a {
+  float: left;
+  display: block;
+  text-align:end;
+  padding: 14px 16px;
+  text-decoration:inherit;
+}
