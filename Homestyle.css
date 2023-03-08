@@ -1,8 +1,9 @@
+/* Header background image */
 header  {
   display: flex;
   flex-direction: row;
   flex: auto;
-  background-image: url("Media/girl-wit-neon-sunglasses.jpg");    
+  background-image: url("Media/girl-wit-neon-sunglasses.jpg"); 
   background-attachment: scroll;
   background-size:cover;
   padding: 3% 3% 3% 3%;
@@ -10,23 +11,24 @@ header  {
   left: -0.025%;
   right: -0.025%;
   top: 0%;
-  bottom: -26.48%;  
+  bottom: -26.48%;
 }
 
-header .logo { 
+/* Logo background */
+.logo { 
   flex: 2;
   z-index: 1;  
   margin-bottom: 150%;
 }
 
-
+/* Navigation bar background */
 header .nav {
   background-color: black;
   display: flex;
   flex: 4;
-  font-weight: 700;
-  font-size: 25px;
-  font-family: 'Courier New', monospace;
+  font-weight: 500;
+  font-size: 20px;
+  font-family: 'futura', sans-serif;
   line-height: 15px;
   text-transform: uppercase;
   z-index: 1;  
@@ -35,10 +37,255 @@ header .nav {
   margin-bottom: 200%; 
     
 }
-
+ /* Navigation links */
 header .nav a {
-  margin-left:1%;
-  margin-right: 1%;
-  text-decoration: none;
+    margin-left:1%;
+    margin-right: 1%;
+    text-decoration: none;
+    color: white;
+}
+
+
+.header-section {
+  left: 20%;
+  right: 20%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: -2.6rem;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5rem;
+}
+
+.join_us-btn {
+  background: black;
+  border-radius: 50px;
+  border: none; 
   color: white;
+  font-weight: 500;
+  box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.5);
+  position: relative;
+  align-self: bottom;
+  margin-top: 23rem;
+  margin-left: 20rem;
+  margin-right: 63rem;
+  padding: 1rem;
+} 
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: -8px;
+} 
+
+/* The Modal (background) */
+.login_window {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+    
+}
+
+form {
+    margin: 5% 30% 10% 30%;
+    padding: 1%;
+    width: 37%;
+    border: 3px solid black;
+    background-color: white;
+    font-family: 'futura', sans-serif;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  text-decoration-color: white; 
+}
+
+.login_btn, .signup_btn {
+  background-color: #f0f5f5;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f0f5f5;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+}
+    
+.cancelbtn {
+    width: 20%;
+  }
+
+.who_are_we {
+    background-color: #4dd2ff;
+    padding: 5% 15% 20% 15%;
+    margin-top: 20rem;
+}
+
+.who_are_we-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding-left: 9%;
+  padding-right: 9%;
+}
+.who_are_we-title {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 500; 
+    font-family: 'futura', sans-serif;
+    margin-bottom: 13rem; 
+}
+
+.how_it_works {
+    background-color: #f0f5f5;
+    padding: 8% 20% 30% 20%;
+    
+}
+
+.how_it_works-title {
+    color: black;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 500; 
+    font-family: 'futura', sans-serif;
+    margin-bottom: 13rem;
+    margin-top: 1rem;
+}
+
+.how_it_works-block {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   color: black;
+   padding-left: 9%;
+   padding-right: 9%;   
+}
+
+.meet_team {
+   background-color: white;
+   padding: 2%;
+   display: flex;
+   flex-direction: column;
+}
+
+.team_title {
+   position: relative;
+   align-self: center;
+   padding: 2rem;
+   font-weight: 300;
+   font-family: 'futura', sans-serif;
+   line-height: 40px;
+    
+}
+
+.team_block {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.member {
+  width: 25%;
+  margin-bottom: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.member img {
+  max-width: 80%;
+}
+
+.member h3 {
+  font-weight: 900;
+  font-size: 18px;
+  font-family: 'futura', sans-serif;
+  margin-top: 1rem;
+  margin-bottom: 0.2rem;
+  text-align: center;
+}
+
+.member p {
+  font-family: 'futura', sans-serif;
+  text-align: center;
+  font-size: 16px; 
+}
+
+footer {
+  position: scroll;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: black;
+  padding: 1rem;
+}
+
+.footer_container {
+  display: flex;
+  flex-direction: column;  
+}
+.footer_container h3, p {
+  color: white;
+  opacity: 0.35;
+  text-align: center;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.footer_nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem 8rem 4rem 8rem;
+}
+
+.footer_nav div a {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
