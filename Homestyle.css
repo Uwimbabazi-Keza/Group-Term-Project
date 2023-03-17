@@ -22,27 +22,28 @@ header  {
 }
 
 /* Navigation bar background */
-header .nav {
-  background-color: black;
+header .nav-bar {
   display: flex;
-  flex: 4;
+  flex-direction: row;
+  flex: 1;
   font-weight: 500;
   font-size: 20px;
   font-family: 'futura', sans-serif;
-  line-height: 15px;
+  line-height: 30px;
   text-transform: uppercase;
   z-index: 1;  
-  justify-content: space-evenly;
+  justify-content: center;
   margin-top: 1%;
-  margin-bottom: 200%; 
-    
+  margin-bottom: 2%;
+  text-decoration: none;  
 }
+
+
  /* Navigation links */
 header .nav a {
-    margin-left:1%;
-    margin-right: 1%;
     text-decoration: none;
     color: white;
+    margin: 70;
 }
 
 
@@ -82,7 +83,7 @@ main {
 } 
 
 /* The Modal (background) */
-.login_window {
+.loginwindow {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */

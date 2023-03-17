@@ -9,12 +9,14 @@
     </head>
     <body>
         <header>  
+            <div class="nav-bar">
             <div class = "logo"><a href="Home.html"><img src="Media/Young.png" alt="logo" width="50" height="50" /></a></div>
             <div class = "nav">
-                <a href="whoarewe">Who We Are</a>
-                <a href="howitworks">How It Works</a>
-                <a href="contactus">Contact Us</a>
+                <a href="#whoarewe">Who We Are</a>
+                <a href="#howitworks">How It Works</a>
+                <a href="#contactus">Contact Us</a>
             </div>
+            </div>    
         </header>
             <main>
                 <section class="header-section">
@@ -48,14 +50,14 @@
                     </div>
                     </div>
                 </section>
-                <section class="who_are_we">
+                <section class="who_are_we" id="whoarewe">
                 <div class="who_are_we-block">
                     <h2 class="who_are_we-title">Who are we</h2>
                     <p>(text)</p>
                 </div>
                 </section>
                 
-                <section class="how_it_works">
+                <section class="how_it_works" id="howitworks">
                 <div>
                     <h2 class="how_it_works-title">How it Works</h2>
                     <p>text</p>
@@ -85,7 +87,7 @@
             </main>
         <footer>
                 <div class = "logo"><a href="Home.html"><img src="Media/Young.png" alt="logo" width="50" height="50" /></a></div>
-                <div class="contact">
+                <div class="contact" id="contactus">
                         <h3>Contact</h3>
                         <p>+00 000 000 000<br>youngcapable@gmail.com</p>
                 </div>
@@ -95,5 +97,16 @@
                      <a href="Home.html"><img src="Media/Instagram_White.svg" width="30" height="40"></a>
                 </div>
         </footer>
+
+        <script>
+    
+            var loginwindow = document.getElementById('id01');
+            
+            window.onclick = function(event) {
+              if (event.target == loginwindow) {
+                loginwindow.style.display = "none";
+              }
+            }
+        </script>
     </body>
 </html>
