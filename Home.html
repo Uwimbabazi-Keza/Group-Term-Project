@@ -7,27 +7,18 @@
         <link rel="stylesheet" href="Homestyle.css">
         <title>Young & Capable</title>
     </head>
-    <body>
-        <header>  
+    <body> 
             <div class="nav-bar">
-            <div class = "logo"><a href="Home.html"><img src="Media/Young.png" alt="logo" width="50" height="50" /></a></div>
+            <div class = "logonav"><a href="Home.html"><img src="Media/Young.png" alt="logo" width="40" height="37" /></a></div>
             <div class = "nav">
                 <a href="#whoarewe">Who We Are</a>
                 <a href="#howitworks">How It Works</a>
                 <a href="#contactus">Contact Us</a>
             </div>
-            </div>    
-        </header>
+            </div>
+    
             <main>
                 <section class="header-section">
-                    <!-- Button to open login form -->
-                    <div class="login">
-                        <button class="join_us-btn" onclick="document.getElementById('id01').style.display='block'">Join us</button>
-                    
-                    <!-- log in window -->
-                    <div id="id01" class="loginwindow">
-                        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                  
                         <!-- main login form content -->
                         <form action="Home.html" method="post">
                             <div class="container">
@@ -36,31 +27,30 @@
                                 <label for="psw"><b>Password</b></label>
                                 <input type="password" placeholder="Enter Password" name="psw" required>
                                 <button class="login_btn" type="submit">Login</button>
-                                <button class="signup_btn" type="submit">Sign up</button>
+                                <button type="submit">Sign up</button>
                                 <label>
                                 <input type="checkbox" checked="checked" name="remember"> Remember me
                                 </label>
-                           </div>
 
-                           <div class="container" style="background-color:#f1f1f1">
-                               <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                               <span class="psw">Forgot <a href="#">password?</a></span>
+                           <div class="cancel_container" style="background-color:#f1f1f1">
+                               <button type="button"  class="cancelbtn">Cancel</button>
+                               <div class="psw">Forgot <a href="#">password?</a></div>
                            </div>
+                          </div>
                       </form>
-                    </div>
-                    </div>
                 </section>
                 <section class="who_are_we" id="whoarewe">
                 <div class="who_are_we-block">
                     <h2 class="who_are_we-title">Who are we</h2>
-                    <p>(text)</p>
+                    <p> We are Young&Capable and we believe in empowering young aspiring South African entrepreneurs.
+                    Our mission is to counter the Nation's high unemployment rate by providing a space where people can connect, share opportunities and learn from established entrepreneurs and their peers. By doing so, we can help foster job creation.</p>
                 </div>
                 </section>
                 
                 <section class="how_it_works" id="howitworks">
-                <div>
+                <div class="how_it_works-block">
                     <h2 class="how_it_works-title">How it Works</h2>
-                    <p>text</p>
+                    <p>We have three important features important to your entrepreneurial journey. The first consists of live seminars hosted by accomplished entrepreneurs in efforts to learn and connect as you gain new insights. The second is a Discussion Forum that facilitates an exchange of ideas and  fosters networking amongst people with shared interests. Lastly, we offer an Opportunity Board. This is a forum where people can post and discover opportunities such as job listings, funding opportunities or internships. </p>
                 </div>
                 </section>>
                 
@@ -98,15 +88,5 @@
                 </div>
         </footer>
 
-        <script>
-    
-            var loginwindow = document.getElementById('id01');
-            
-            window.onclick = function(event) {
-              if (event.target == loginwindow) {
-                loginwindow.style.display = "none";
-              }
-            }
-        </script>
     </body>
 </html>

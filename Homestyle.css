@@ -1,110 +1,87 @@
 /* Header background image */
-header  {
+
+body {
+  
+  max-width: 100%;
+  margin: 0%;
+  font-family: Arial, sans-serif;
+}
+
+
+.nav-bar {
+  margin: 0%;
+  max-width:inherit; 
+  overflow: hidden;
+  background-color: #F4FFFE;
+  box-shadow: 20px black
+    
+}
+.nav {
   display: flex;
-  flex-direction: row;
-  flex: auto;
-  background-image: url("Media/girl-wit-neon-sunglasses.jpg"); 
-  background-attachment: scroll;
-  background-size:cover;
-  padding: 3% 3% 3% 3%;
-  position: absolute;
-  left: -0.025%;
-  right: -0.025%;
-  top: 0%;
-  bottom: -26.48%;
+  justify-content: flex-end;
+}
+.nav-bar a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 1px 18px;
+  text-decoration: none;
+  font-size: 16px;
 }
 
-/* Logo background */
-.logo { 
-  flex: 2;
-  z-index: 1;  
-  margin-bottom: 150%;
+.logonav {
+    position: absolute; 
+    top: 7;
 }
 
-/* Navigation bar background */
-header .nav-bar {
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-  font-weight: 500;
-  font-size: 20px;
-  font-family: 'futura', sans-serif;
-  line-height: 30px;
-  text-transform: uppercase;
-  z-index: 1;  
-  justify-content: center;
-  margin-top: 1%;
-  margin-bottom: 2%;
-  text-decoration: none;  
+.logonav img {
+    border-radius:50%;
+    
+}
+.nav a {
+  padding: 14px 50px 18px 50px;
+   
+}
+.nav-bar a:hover {
+  background-color: #ddd;
 }
 
-
- /* Navigation links */
-header .nav a {
-    text-decoration: none;
-    color: white;
-    margin: 70;
-}
-
-
-.header-section {
-  left: 20%;
-  right: 20%;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: -2.6rem;
-}
-
-.login {
-  display: flex;
-  flex-direction: column;
-  padding-top: 5rem;
-}
-
-.join_us-btn {
-  background: black;
-  border-radius: 70px;
-  border: none; 
+.nav-bar a.active {
+  background-color: #04AA6D;
   color: white;
-  font-weight: 500;
-  box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.5);
-  position: relative;
-  align-self: bottom;
-  margin-top: 22rem;
-  margin-left: 15rem;
-  margin-right: 53rem;
-  padding: 1rem;
-} 
+}
+
+
+ 
 main {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  margin: -8px;
+  margin: 0%;
+  
 } 
 
 /* The Modal (background) */
-.loginwindow {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-top: 60px;
-    
+
+.header-section {
+    background-repeat: no-repeat;
+    position: sticky;
+    height: 1000;
+    width: 100%;
+    background-color: lightgrey;
+    background-image: url("Media/group-five-african-college-students-campus-university-yard-hold-empty-white-blank-free-space-your-text-black-afro-friends-studying.jpg");
+    background-size: 100% 100%;
 }
 
+
 form {
-    margin: 5% 30% 10% 30%;
-    padding: 1%;
-    width: 37%;
-    border: 3px solid black;
     background-color: white;
-    font-family: 'futura', sans-serif;
+    border-radius: 1%;
+    box-shadow: -2px 3px 20px black;  
+    z-index: 1;
+    position: relative;
+    top: 45%;
+    left: 34%;
+    width: 40%;
+    height: 45%;
 }
 
 input[type=text], input[type=password] {
@@ -114,10 +91,9 @@ input[type=text], input[type=password] {
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
-  text-decoration-color: white; 
 }
 
-.login_btn, .signup_btn {
+button {
   background-color: #f0f5f5;
   color: black;
   padding: 14px 20px;
@@ -128,7 +104,7 @@ input[type=text], input[type=password] {
 }
 
 button:hover {
-  opacity: 0.8;
+  opacity: 0.5;
 }
 
 .cancelbtn {
@@ -138,52 +114,72 @@ button:hover {
 }
 
 .container {
-  padding: 16px;
+  position: absolute;
+  padding: 50px 20px;
+  width: 70%;
+  height: 70%;
+  left: 10%;
+  font-size: 80%;
 }
 
-span.psw {
-  float: right;
-  padding-top: 16px;
+.cancel_container {
+  display: flex;
+  position: relative;
+  top: 25px;
+  padding: 5px;
+  font-size: 13px; 
+}
+div.psw {
+  position: absolute;
+  left: 65%; 
+  float: left;
+  padding: 4%;
 }
 
 @media screen and (max-width: 300px) {
-  span.psw {
+ div .psw {
     display: block;
     float: none;
   }
 }
     
 .cancelbtn {
-    width: 20%;
+  width: 100px;
+  padding: 10px 18px;
+  background-color: whitesmoke;
   }
 
 .who_are_we {
-    background-color: #4dd2ff;
+    background-color: #150F2F;
     padding: 5% 15% 20% 15%;
-    margin-top: 20rem;
+    margin-top: -3%;
 }
 
 .who_are_we-block {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  text-align: center;
   color: white;
-  padding-left: 9%;
-  padding-right: 9%;
+  padding: 19% 9% 5% 9%;
+  font-size: 120%;
+  height: 0.5%;
+  
 }
+
 .who_are_we-title {
     color: white;
     text-align: center;
     font-size: 50px;
     font-weight: 500; 
     font-family: 'futura', sans-serif;
-    margin-bottom: 13rem; 
+    margin-bottom: 1rem; 
 }
 
 .how_it_works {
     background-color: #f0f5f5;
-    padding: 8% 20% 30% 20%;
+    padding: 5% 15% 20% 15%;
+    margin-top: -3%;
     
 }
 
@@ -193,18 +189,19 @@ span.psw {
     font-size: 50px;
     font-weight: 500; 
     font-family: 'futura', sans-serif;
-    margin-bottom: 13rem;
-    margin-top: 1rem;
+    margin-bottom: 1rem;
+    
 }
 
 .how_it_works-block {
    display: flex;
-   flex-direction: row;
+   flex-direction: column;
    justify-content: center;
-   align-items: center;
-   color: black;
-   padding-left: 9%;
-   padding-right: 9%;   
+   text-align: center;
+   padding: 19% 9% 5% 9%;
+   font-size: 120%;
+   height: 0.5%;
+   color: black;  
 }
 
 .meet_team {
