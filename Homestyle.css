@@ -30,12 +30,13 @@ body {
 
 .logonav {
     position: absolute; 
-    top: 7;
+    top: 0.7%;
 }
 
 .logonav img {
     border-radius:50%;
-    
+    width: 40px;
+    height: 37px; 
 }
 .nav a {
   padding: 14px 50px 18px 50px;
@@ -262,19 +263,19 @@ footer {
   color: white;
   padding: 2rem;
   display: flex;
-  max-height: 95;
+  max-height: 100%;
    
 }
 
-
-.contact  {
+.youngcapabletag  {
   flex-grow: 100;
-  text-align: center;  
+  text-align: left;
+  margin-top: 1%;  
 }
     
 .socials {
     flex-grow: 2;
-    margin-top: 3rem;
+    margin-top: 1.5%;
 }
 
 .socials a {
