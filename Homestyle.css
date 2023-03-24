@@ -1,7 +1,6 @@
 /* Header background image */
 
 body {
-  
   max-width: 100%;
   margin: 0%;
   font-family: Arial, sans-serif;
@@ -13,9 +12,9 @@ body {
   max-width:inherit; 
   overflow: hidden;
   background-color: #F4FFFE;
-  box-shadow: 20px black
-    
+  box-shadow: 20px black;   
 }
+
 .nav {
   display: flex;
   justify-content: flex-end;
@@ -84,7 +83,10 @@ form {
     height: 45%;
 }
 
-input[type=text], input[type=password] {
+.form-hidden {
+    display: none;
+}
+input[type=text], input[type=password], input[type=confirm-password] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -115,20 +117,14 @@ button:hover {
 
 .container {
   position: absolute;
-  padding: 50px 20px;
+  padding: 75px 20px;
   width: 70%;
   height: 70%;
   left: 10%;
   font-size: 80%;
 }
 
-.cancel_container {
-  display: flex;
-  position: relative;
-  top: 25px;
-  padding: 5px;
-  font-size: 13px; 
-}
+
 div.psw {
   position: absolute;
   left: 65%; 
@@ -138,7 +134,7 @@ div.psw {
 
 @media screen and (max-width: 300px) {
  div .psw {
-    display: block;
+    display: flex;
     float: none;
   }
 }

@@ -20,22 +20,31 @@
             <main>
                 <section class="header-section">
                         <!-- main login form content -->
-                        <form action="Home.html" method="post">
+                        <form  id="log-in-account">
                             <div class="container">
                                 <label for="uname"><b>Username</b></label>
                                 <input type="text" placeholder="Enter Username" name="uname" required>
                                 <label for="psw"><b>Password</b></label>
                                 <input type="password" placeholder="Enter Password" name="psw" required>
-                                <button class="login_btn" type="submit">Login</button>
-                                <button type="submit">Sign up</button>
-                                <label>
+                                <button class="login_btn" type="submit" formaction="Entrepreneurial-hub.html">Login</button>
+                                <button type="submit" id="sign-up-form-link">Sign up</button>
+                                <div class="remember-me-and-forget-psw">
                                 <input type="checkbox" checked="checked" name="remember"> Remember me
-                                </label>
-
-                           <div class="cancel_container" style="background-color:#f1f1f1">
-                               <button type="button"  class="cancelbtn">Cancel</button>
                                <div class="psw">Forgot <a href="#">password?</a></div>
-                           </div>
+                                </div>
+                          </div>
+                      </form>
+                      <form class="form-hidden" id="sign-up-account">
+                            <div class="container">
+                                <label for="uname"><b>Username</b></label>
+                                <input type="text" placeholder="Enter Username" name="uname" required>
+                                <label for="psw"><b>Password</b></label>
+                                <input type="password" placeholder="Enter Password" name="psw" required>
+                                <label for="psw"><b>Confirm password</b></label>
+                                <input type="password" placeholder="Confirm password" name="psw" required>
+                                <button type="submit" formaction="Entrepreneurial-hub.html">Sign up</button>
+                                
+                               <div class="back-to-login"><a href="#" id="linkbacktologin">Already have an account? Login</a></div>
                           </div>
                       </form>
                 </section>
@@ -87,6 +96,6 @@
                      <a href="Home.html"><img src="Media/Instagram_White.svg" width="30" height="40"></a>
                 </div>
         </footer>
-
+        <script src='Homejsscript.js'></script>
     </body>
 </html>
