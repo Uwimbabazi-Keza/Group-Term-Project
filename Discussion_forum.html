@@ -2,6 +2,75 @@
 <html>
 <head>
   <title>Discussion Forum</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+    
+    header {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+    }
+    
+    h1 {
+      margin: 0;
+    }
+    
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 10px;
+    }
+    
+    form {
+      margin-bottom: 20px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+      padding: 10px
+    }
+    
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: none;
+    }
+    
+    button[type="submit"] {
+      background-color: #333;
+      color: white;
+      padding: 10px 30px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    button[type="submit"]:hover {
+      background-color: #444;
+    }
+    
+    article {
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 10px;
+      background:grey;
+    }
+    
+    delete-button {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+    </style>
 </head>
 <body>
   <header>
@@ -20,79 +89,8 @@
      
       <h2>Posts</h2>
   </main>
-</body>
-</html>
 
-body {
-  font-family: sans-serif;
-}
-
-header {
-  background-color: #333;
-  color: white;
-  padding: 10px;
-}
-
-h1 {
-  margin: 0;
-}
-
-main {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 10px;
-}
-
-form {
-  margin-bottom: 20px;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-  padding: 10px
-}
-
-input[type="text"],
-textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: none;
-}
-
-button[type="submit"] {
-  background-color: #333;
-  color: white;
-  padding: 10px 30px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button[type="submit"]:hover {
-  background-color: #444;
-}
-
-article {
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 10px;
-  background:grey;
-}
-
-delete-button {
-  background-color: red;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
-
-
+<script>
 const postForm = document.getElementById('post-form');
 const postList = document.getElementById('post-list');
 
@@ -131,4 +129,6 @@ deleteButtons.forEach(button => {
       });
   });
 });
-
+</script>
+</body>
+</html>
