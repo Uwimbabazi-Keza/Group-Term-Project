@@ -35,9 +35,9 @@
     
     input[type="text"],
     textarea {
-      width: 100%;
+      width: 97%;
       padding: 10px;
-      border: 1px solid #ccc;
+      border: 5px solid #ccc;
       border-radius: 4px;
       resize: none;
     }
@@ -61,6 +61,7 @@
       border-radius: 4px;
       padding: 10px;
       background:grey;
+      color: white;
     }
     
     delete-button {
@@ -70,6 +71,29 @@
       padding: 5px 10px;
       border-radius: 5px;
     }
+
+
+    button.like-button {
+  margin-left: 10px;
+}
+
+.delete-button {
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.delete-button:hover {
+  background-color: darkred;
+}
+
+
+
+
     </style>
 </head>
 <body>
@@ -103,18 +127,109 @@ postForm.addEventListener('submit', event => {
   postForm.reset();
 });
 
-function createPost(title, content) {
+{
+  function createPost(title, content) {
   const article = document.createElement('article');
-  const titleElement = document.createElement('h3');
+  const titleElement = document.createElement('h2');
   const contentElement = document.createElement('p');
+  const replyButton = document.createElement('button');
+  const likeButton = document.createElement('button');
+  const deleteButton = document.createElement('button');
+
   titleElement.textContent = title;
   contentElement.textContent = content;
+  replyButton.textContent = 'Reply';
+  likeButton.textContent = 'Like';
+  deleteButton.textContent = 'Delete';
+  likeButton.classList.add('like-button');
+  deleteButton.classList.add('delete-button');
+
+  replyButton.addEventListener('click', () => {
+    const replyForm = document.createElement('form');
+    const replyLabel = document.createElement('label');
+    const replyInput = document.createElement('textarea');
+    const replySubmitButton = document.createElement('button');
+
+    replyLabel.textContent = 'Reply:';
+    replyInput.name = 'reply-content';
+    replyInput.required = true;
+    replySubmitButton.textContent = 'Post Reply';
+
+    replyForm.appendChild(replyLabel);
+    replyForm.appendChild(replyInput);
+    replyForm.appendChild(replySubmitButton);
+
+    replySubmitButton.addEventListener('click', () => {
+      const replyContent = replyInput.value;
+      const reply = createReply(replyContent);
+      article.appendChild(reply);
+      replyForm.remove();
+    });
+
+    article.appendChild(replyForm);
+  });
+
+  likeButton.addEventListener('click', () => {
+    const postId = article.dataset.postId;
+    fetch(`/posts/${postId}/like`, { method: 'POST' })
+      .then(response => {
+        if (response.ok) {
+          response.json().then(data => {
+            const likeCount = data.likeCount;
+            likeButton.textContent = `Liked (${likeCount})`;
+          });
+        } else {
+          // handle error
+        }
+      });
+  });
+
+  deleteButton.addEventListener('click', () => {
+    const postId = article.dataset.postId;
+    fetch(`/posts/${postId}`, { method: 'DELETE' })
+      .then(response => {
+        if (response.ok) {
+          article.remove();
+        } else {
+          // handle error
+        }
+      });
+  });
+
   article.appendChild(titleElement);
   article.appendChild(contentElement);
+  article.appendChild(replyButton);
+  article.appendChild(likeButton);
+  article.appendChild(deleteButton);
+  article.dataset.postId = Math.floor(Math.random() * 10000);
+
   return article;
 }
 
+}
 
+function createReply(content) {
+  const reply = document.createElement('div');
+  const replyContent = document.createElement('p');
+  const deleteButton = document.createElement('button');
+
+  replyContent.textContent = content;
+  deleteButton.textContent = 'Delete';
+  deleteButton.className = 'delete-button';
+
+  deleteButton.addEventListener('click', () => {
+    reply.remove();
+  });
+
+  reply.appendChild(replyContent);
+  reply.appendChild(deleteButton);
+
+  return reply;
+}
+  
+
+
+{
 const deleteButtons = document.querySelectorAll('.delete-button');
 deleteButtons.forEach(button => {
   button.addEventListener('click', () => {
@@ -122,13 +237,16 @@ deleteButtons.forEach(button => {
     fetch(`/posts/${postId}`, { method: 'DELETE' })
       .then(response => {
         if (response.ok) {
-          // reload the page or remove the deleted post from the DOM
+          // remove the post from the DOM
+          const article = button.closest('article');
+          article.remove();
         } else {
           // handle error
         }
       });
   });
 });
+}
 </script>
 </body>
 </html>
