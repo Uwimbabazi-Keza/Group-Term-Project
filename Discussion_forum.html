@@ -2,29 +2,146 @@
 <html>
 <head>
   <title>Discussion Forum</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body {
-      font-family: sans-serif;
-    }
-    
-    header {
-      background-color: #333;
-      color: white;
-      padding: 10px;
-    }
-    
-    h1 {
-      margin: 0;
-    }
-    
+body {
+  max-width: 100%;
+  margin: 0%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0; 
+  background-color: #F4FFFE;
+  box-shadow: 0px 2px 2px 0px #B6B6B6;   
+}
+
+.nav {
+  display: flex;
+  justify-content:space-between;
+}
+
+.nav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 1px 18px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.logonav {
+  position: relative;
+}
+
+.logonav img {
+    border-radius:50%;
+    width: 37px;
+    height: 34px;
+    margin: -20%;   
+}
+
+.nav a {
+  padding: 20px 50px 15px 50px;
+}
+
+.nav a:hover {
+  background-color: #ddd;
+}
+
+.nav a:visited {
+  background-color: #ddd;
+}
+
+.nav .search-container{
+  float: right; 
+}
+
+.nav input[type=text] {
+  padding: 5px;
+  margin-top: 16px;
+  font-size: 15px;
+  border-style: solid;
+  border-width: thin;
+  border-color: #B6B6B6;
+}
+
+@media screen and (max-width: 600px) {
+  .nav a, .nav input[type=text], .nav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+
+  .nav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+
+.dropbtn {
+  background-color: #F4FFFE;
+  border: none;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 90%;
+  background-color: #150F2F;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: -1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: justify;
+  z-index: 1;
+  
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
     main {
       max-width: 800px;
       margin: 0 auto;
-      padding: 10px;
+      padding: 5px;
+      padding-top: 5%;
     }
     
+    main h1 {
+      font-size: 35px;
+    }
     form {
       margin-bottom: 20px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      width: 100%;
+      padding: 6%;
+    }
+
+    form h2 {
+      color: #392881;
+      font-size: 27px;
     }
     
     label {
@@ -35,20 +152,21 @@
     
     input[type="text"],
     textarea {
-      width: 100%;
+      width: 97%;
       padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
+      border: 1px solid black;
       resize: none;
     }
     
     button[type="submit"] {
-      background-color: #333;
-      color: white;
+      background-color: #FFFBA1;
+      color: black;
+      font-weight: bold;
       padding: 10px 30px;
       border: none;
-      border-radius: 4px;
+      border-radius: 25px;
       cursor: pointer;
+      display
     }
     
     button[type="submit"]:hover {
@@ -61,6 +179,7 @@
       border-radius: 4px;
       padding: 10px;
       background:grey;
+      color: white;
     }
     
     delete-button {
@@ -70,65 +189,243 @@
       padding: 5px 10px;
       border-radius: 5px;
     }
+  
+button.like-button {
+  margin-left: 10px;
+}
+
+.delete-button {
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.delete-button:hover {
+  background-color: darkred;
+}
+      
+body > footer {
+  position: sticky;
+  top: 100vh;
+}
+
+footer {
+  background-color: #150F2F;
+  padding: 2rem;
+  color: white;
+  padding: 2rem;
+  display: flex;
+  height: 20%;
+  width: 115%;
+  border-top: white;  
+}
+
+.youngcapabletag  {
+  flex-grow: 17;
+  text-align: left;
+  margin-top: 1%;
+  font-size: 20px;  
+}
+    
+.socials {
+    flex-direction: column;
+    flex-grow: 1;
+    margin-top: 1.5% 
+}
+
+.socials a {
+    margin: 1%;
+}
     </style>
 </head>
 <body>
-  <header>
-    <h1>Discussion Forum</h1>
-  </header>
-  <main>
-    <form id="post-form">
-      <h2>New Post</h2>
-      <label for="post-title">Title:</label>
-      <input type="text" id="post-title" name="post-title" required>
-      <label for="post-content">Content:</label>
-      <textarea id="post-content" name="post-content" required></textarea>
-      <h2><button type="submit">Post</button></h2>
-     </form>
-    <section id="post-list">
-     
-      <h2>Posts</h2>
-  </main>
-
+  <div class="navbar">
+    <div class = "nav">
+      <a href="Home.html" class = "logonav"><img src="Media/Young.png" alt="logo"/></a>
+        <a href="#opportunityboard">Opportunity Board</a>
+        <a href="Discussion_forum.html">Discussion Forum</a>
+        
+        <div class="dropdown">
+        <div class="dropbtn"><a href="Entrepreneurial-hub.html">Learning Hub</a></div>
+          <div class="dropdown-content">
+            <a href="#">Recorded Seminars</a>
+            <a href="#">Development</a>
+            <a href="#">Marketing</a>
+            <a href="#">Business</a>
+            <a href="#">Finance</a>
+            <a href="#">Career Guidance</a>
+          </div>
+        </div>
+        
+        <div class="search-container">
+          <input type="text" placeholder="Search.." name="search">
+        </div>
+        <a href="#userdashboard">User</a>
+    </div>
+    </div>
+    <main>
+      <h1>Start a Discussion</h1>
+      <form id="post-form">
+        <h2>New Post</h2>
+        <label for="post-title">Title:</label>
+        <input type="text" id="post-title" name="post-title" required>
+        <label for="post-content">Content:</label>
+        <textarea id="post-content" name="post-content" required></textarea>
+        <h2><button type="submit">Post</button></h2>
+       </form>
+      <section id="post-list">
+       
+        <h2>Posts</h2>
+    </main>
+  
+  <footer>
+  <div class="youngcapabletag">
+          <p>@youngandcapable</p>
+  </div>
+  <div class="socials">
+    <a href="Home.html"><img src="Media/Facebook_White.svg" width="40px" height="40px"></a>
+    <a href="Home.html"><img src="Media/Twitter_White.svg" width="40px" height="40px"></a>
+    <a href="Home.html"><img src="Media/Instagram_White.svg" width="40px" height="40px"></a>
+</div>
+</footer>
+    
 <script>
-const postForm = document.getElementById('post-form');
-const postList = document.getElementById('post-list');
-
-postForm.addEventListener('submit', event => {
-  event.preventDefault();
-  const title = event.target.elements['post-title'].value;
-  const content = event.target.elements['post-content'].value;
-  const post = createPost(title, content);
-  postList.appendChild(post);
-  postForm.reset();
-});
-
-function createPost(title, content) {
-  const article = document.createElement('article');
-  const titleElement = document.createElement('h3');
-  const contentElement = document.createElement('p');
-  titleElement.textContent = title;
-  contentElement.textContent = content;
-  article.appendChild(titleElement);
-  article.appendChild(contentElement);
-  return article;
-}
-
-
-const deleteButtons = document.querySelectorAll('.delete-button');
-deleteButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const postId = button.dataset.postId;
-    fetch(`/posts/${postId}`, { method: 'DELETE' })
-      .then(response => {
-        if (response.ok) {
-          // reload the page or remove the deleted post from the DOM
-        } else {
-          // handle error
-        }
-      });
+  const postForm = document.getElementById('post-form');
+  const postList = document.getElementById('post-list');
+  
+  postForm.addEventListener('submit', event => {
+    event.preventDefault();
+    const title = event.target.elements['post-title'].value;
+    const content = event.target.elements['post-content'].value;
+    const post = createPost(title, content);
+    postList.appendChild(post);
+    postForm.reset();
   });
-});
-</script>
+  
+  {
+    function createPost(title, content) {
+    const article = document.createElement('article');
+    const titleElement = document.createElement('h2');
+    const contentElement = document.createElement('p');
+    const replyButton = document.createElement('button');
+    const likeButton = document.createElement('button');
+    const deleteButton = document.createElement('button');
+  
+    titleElement.textContent = title;
+    contentElement.textContent = content;
+    replyButton.textContent = 'Reply';
+    likeButton.textContent = 'Like';
+    deleteButton.textContent = 'Delete';
+    likeButton.classList.add('like-button');
+    deleteButton.classList.add('delete-button');
+  
+    replyButton.addEventListener('click', () => {
+      const replyForm = document.createElement('form');
+      const replyLabel = document.createElement('label');
+      const replyInput = document.createElement('textarea');
+      const replySubmitButton = document.createElement('button');
+  
+      replyLabel.textContent = 'Reply:';
+      replyInput.name = 'reply-content';
+      replyInput.required = true;
+      replySubmitButton.textContent = 'Post Reply';
+  
+      replyForm.appendChild(replyLabel);
+      replyForm.appendChild(replyInput);
+      replyForm.appendChild(replySubmitButton);
+  
+      replySubmitButton.addEventListener('click', () => {
+        const replyContent = replyInput.value;
+        const reply = createReply(replyContent);
+        article.appendChild(reply);
+        replyForm.remove();
+      });
+  
+      article.appendChild(replyForm);
+    });
+  
+    likeButton.addEventListener('click', () => {
+      const postId = article.dataset.postId;
+      fetch(`/posts/${postId}/like`, { method: 'POST' })
+        .then(response => {
+          if (response.ok) {
+            response.json().then(data => {
+              const likeCount = data.likeCount;
+              likeButton.textContent = `Liked (${likeCount})`;
+            });
+          } else {
+            // handle error
+          }
+        });
+    });
+  
+    deleteButton.addEventListener('click', () => {
+      const postId = article.dataset.postId;
+      fetch(`/posts/${postId}`, { method: 'DELETE' })
+        .then(response => {
+          if (response.ok) {
+            article.remove();
+          } else {
+            // handle error
+          }
+        });
+    });
+  
+    article.appendChild(titleElement);
+    article.appendChild(contentElement);
+    article.appendChild(replyButton);
+    article.appendChild(likeButton);
+    article.appendChild(deleteButton);
+    article.dataset.postId = Math.floor(Math.random() * 10000);
+  
+    return article;
+  }
+  
+  }
+  
+  function createReply(content) {
+    const reply = document.createElement('div');
+    const replyContent = document.createElement('p');
+    const deleteButton = document.createElement('button');
+  
+    replyContent.textContent = content;
+    deleteButton.textContent = 'Delete';
+    deleteButton.className = 'delete-button';
+  
+    deleteButton.addEventListener('click', () => {
+      reply.remove();
+    });
+  
+    reply.appendChild(replyContent);
+    reply.appendChild(deleteButton);
+  
+    return reply;
+  }
+    
+  
+  
+  {
+  const deleteButtons = document.querySelectorAll('.delete-button');
+  deleteButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const postId = button.dataset.postId;
+      fetch(`/posts/${postId}`, { method: 'DELETE' })
+        .then(response => {
+          if (response.ok) {
+            // remove the post from the DOM
+            const article = button.closest('article');
+            article.remove();
+          } else {
+            // handle error
+          }
+        });
+    });
+  });
+  }
+  </script>
 </body>
 </html>
