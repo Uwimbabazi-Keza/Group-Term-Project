@@ -18,7 +18,7 @@ main {
 
 .navbar {
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   left: 0;
   right: 0;
@@ -314,6 +314,7 @@ input[type=submit]:hover {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   padding: 15px 35px;
   cursor: pointer;
+  z-index: 1;
 }
 
 .btns [type="submit"], [type="button"] {
@@ -466,7 +467,6 @@ footer {
     </div>
   <main> 
       <section class="welcomesection">
-      <div class="seminar-container">
       <div id="welcome"><h2>Welcome</h2></div>
       <button id="register" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Register</button>
       <div id="id01" class="form-container">
@@ -490,7 +490,7 @@ footer {
         </div>
       </form>
       </div>
-      </div>
+      
 
 <div id="thankYouMsg" style="display:none;">
   <h3>Thank you for your submission!</h3>
@@ -515,7 +515,8 @@ footer {
     </div>
     
     <div class="mySlides fade">
-      <div class="content-container"><div class="imgcontainer"><img src="Media/vthem.jpg"></div>
+      <div class="content-container">
+        <div class="imgcontainer"><img src="Media/vthem.jpg"></div>
     <div class ="seminar-details">
         <h2>Join us with Vusi Thembekwayo</h2>
         <p>Vusi is a famous South African entrepreneur, author, international speaker, podcaster, investor, businessman, and social media influencer from Benoni, East Rand, Gauteng Province, South Africa. He is well-known in the country for his amazing entrepreneurship masterclass and quotes. Being a successful entrepreneur, he serves the position of Chief Executive Officer at MyGrowthFund Venture Partners.</p>
@@ -542,6 +543,7 @@ footer {
       <span class="dot" onclick="currentSlide(3)"></span> 
     </div>
 </section>
+</div>
 </section>
 <div class="video-row">
   <h1>Interested in learning Business?</h1>>
