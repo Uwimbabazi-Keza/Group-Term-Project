@@ -8,11 +8,15 @@ body {
 
 
 .nav-bar {
+  position: fixed;
   margin: 0%;
+  top: 0;
+  left: 0;
+  right: 0;
   max-width:inherit; 
-  overflow: hidden;
   background-color: #F4FFFE;
-  box-shadow: 20px black;   
+  box-shadow: 0px 10px 70px 0px rgb(46, 46, 46);
+  z-index: 1;   
 }
 
 .nav {
@@ -50,17 +54,13 @@ body {
   background-color: #04AA6D;
   color: white;
 }
-
-
  
 main {
   position: relative;
-  margin: 0%;
-  
+  margin: 0%;  
 } 
 
 /* The Modal (background) */
-
 .header-section {
     background-repeat: no-repeat;
     position: sticky;
@@ -71,19 +71,26 @@ main {
     background-size: 100% 100%;
 }
 
-
 form {
-    background-color: white;
+    background-color:#fbffca;
     border-radius: 1%;
     box-shadow: -2px 3px 20px black;  
     z-index: 1;
+    opacity: 0.9;
     position: relative;
     top: 45%;
-    left: 34%;
+    left: 32%;
     width: 40%;
     height: 45%;
+    text-align: center;
 }
 
+.formtitle {
+    margin: 0;
+    font-size: 38;
+    font-weight: bold;
+    padding-bottom: 6%;
+}
 .form-hidden {
     display: none;
 }
@@ -92,18 +99,24 @@ input[type=text], input[type=password], input[type=confirm-password] {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
+  border: none;
   box-sizing: border-box;
+  background-color:#fbffca;
+  text-align: center;
+  border-bottom: 2px solid #C239BD;
 }
 
 button {
-  background-color: #f0f5f5;
-  color: black;
+  background-color: #0b8383;
+  color: rgb(255, 255, 255);
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
   width: 100%;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 15px;;
 }
 
 button:hover {
@@ -125,12 +138,21 @@ button:hover {
   font-size: 80%;
 }
 
+.remember-me-and-forget-psw {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  top: 20%;
+}
+
+.checkbx {
+  position: relative;
+}
 
 div.psw {
-  position: absolute;
-  left: 65%; 
-  float: left;
-  padding: 4%;
+  position: relative;
+  left: 46%; 
+  
 }
 
 @media screen and (max-width: 300px) {
@@ -139,12 +161,6 @@ div.psw {
     float: none;
   }
 }
-    
-.cancelbtn {
-  width: 100px;
-  padding: 10px 18px;
-  background-color: whitesmoke;
-  }
 
 .who_are_we {
     background-color: #150F2F;
