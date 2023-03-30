@@ -34,7 +34,7 @@ body {
 
 .logonav {
     position: absolute; 
-    top: 0.7%;
+    top: 10%;
 }
 
 .logonav img {
@@ -49,15 +49,11 @@ body {
 .nav-bar a:hover {
   background-color: #ddd;
 }
-
-.nav-bar a.active {
-  background-color: #04AA6D;
-  color: white;
-}
  
 main {
   position: relative;
-  margin: 0%;  
+  margin: 0%;
+  max-width: 100%;  
 } 
 
 /* The Modal (background) */
@@ -80,7 +76,7 @@ form {
     position: relative;
     top: 45%;
     left: 32%;
-    width: 40%;
+    width: 43%;
     height: 45%;
     text-align: center;
 }
