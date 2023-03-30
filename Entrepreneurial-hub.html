@@ -159,11 +159,9 @@ main {
   height: 450px;
 }
 
-
 .imgcontainer {
   width: 60%;
   height: 100%;
-  
 }
 
 .imgcontainer img {
@@ -194,7 +192,7 @@ main {
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: #FFFBA1;
+  background-color:#f0fffe;
 }
 
 
@@ -241,7 +239,7 @@ main {
 .form-container {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 3; /* Sit on top */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -255,23 +253,30 @@ main {
 form {
   width: 500px;
   margin: auto;
-  background-color: gray;
+  background-color: white;
   padding: 20px;
-  border-radius: 30px;
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
 }
 
+#registerhere {
+  color:white;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500px;
+  background-color:#150F2F;
+  padding: 10%;
+  margin: -20px -20px 0px;
+}
 label {
   display: block;
   margin-bottom: 20px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 input[type=text], input[type=email], select {
   width: 100%;
   padding: 8px;
-  border-radius: 5px;
-  border: black;
+  border: 1px solid rgb(83, 83, 83);
   margin-bottom: 20px;
   box-sizing: border-box;
 }
@@ -318,8 +323,19 @@ input[type=submit]:hover {
 }
 
 .btns [type="submit"], [type="button"] {
-  background-color: #333;
-  color: green;
+  background-color:#FFFBA1;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  color: rgb(0, 0, 0);
+  padding: 10px 30px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btns [type="button"] {
+  background-color:#f0fffe;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  color: rgb(0, 0, 0);
   padding: 10px 30px;
   border: none;
   border-radius: 4px;
@@ -343,7 +359,6 @@ input[type=submit]:hover {
 	position: relative;
 	top: 10%;
 	left: 50%;
-	transform: translate(-10%, -10%);
 }
 
 .video-container {
@@ -471,6 +486,7 @@ footer {
       <button id="register" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Register</button>
       <div id="id01" class="form-container">
       <form id="myForm">
+        <h3 id="registerhere">Young&Capable<h3>
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
         <label for="email">Email:</label>
@@ -492,7 +508,7 @@ footer {
       </div>
       
 
-<div id="thankYouMsg" style="display:none;">
+<form id="thankYouMsg" style="display:none;">
   <h3>Thank you for your submission!</h3>
   <p>We have received your registration for the following seminar:</p>
   <ul>
@@ -502,7 +518,7 @@ footer {
     <li><strong>Date:</strong> <span id="dateOutput"></span></li>
   </ul>
   <a href="http://127.0.0.1:5500/bigbrother.html" class="center-link">Go back to the form</a>
-</div>
+</form>
 
 <section> 
   <div class="slideshow-container">
@@ -646,13 +662,18 @@ const container = document.querySelector('.container');
     });
 
 
-// Function that displays register form when button is clicked
+// Function that displays register form when button is clicked and displays thank you message after
 const formcontainer = document.getElementById('id01');
+const thankyoumessage = document.getElementById('thankYouMsg')
 
 // When the user clicks anywhere outside of the form, close it
 window.onclick = function(event) {
     if (event.target == formcontainer) {
         formcontainer.style.display = "none";
+    }
+
+    if (event.target == thankyoumessage) {
+        thankyoumessage.style.display = "none";
     }
 }
 </script>
