@@ -3,13 +3,12 @@
 <head>
 	<title>Entrepreneurial Hub</title>
 <style>
-html {height: 100%;}	
+* {
+box-sizing: border-box;
+}	
 body {
-  min-width: 100%;
-  height: 100%;
   margin: 0%;
   font-family: Arial, sans-serif;
-  background-color: yellowgreen;
 }
 
 main {
@@ -19,6 +18,7 @@ main {
 
 .navbar {
   position: fixed;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
@@ -129,19 +129,113 @@ main {
 }
 
 
-.seminar-container {
-   max-width: 1120px;
-   max-height: 450px;
-   margin:auto;
-   background-color: pink;
-   margin-top: 5%;
+.welcomesection {
+  height: 680px;
 }
+
 #welcome {
    width: fit-content;
-   text-align: inherit;
+   position: relative;
+   top: 70px;
+   left: 20%;
    font-size: 27px;
-   background-color: white;
-   padding: 0% 80% 0% 5%;
+   padding-bottom: 1%;  
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1120px;
+  max-height: 450px;
+  position: relative;
+  margin:auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  display: flex;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 1120px;
+  height: 450px;
+}
+
+
+.imgcontainer {
+  width: 60%;
+  height: 100%;
+  
+}
+
+.imgcontainer img {
+  width: 100%;
+  height: 100%;
+}
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: #FFFBA1;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 5px 2px;
+  background-color: #bbb; 
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #affaff;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+.seminar-details {
+  position: relative;
+  text-align:start;
+  width: fit-content;
+  height: 100%;
+  padding: 5%;
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
 }
 
 .form-container {
@@ -197,11 +291,6 @@ input[type=submit]:hover {
   background-color: white;
 }
 
-
-* {
-box-sizing: border-box;
-}
-
 .caption {
   position: center;
   bottom: 0;
@@ -216,6 +305,9 @@ box-sizing: border-box;
 }
 
 #register {
+  position: relative;
+  top: 430px;
+  left: 20.5%;
   background-color: #FFFBA1;
   border-radius: 25px;
   border: none;
@@ -372,7 +464,8 @@ footer {
         <a href="#userdashboard">User</a>
     </div>
     </div>
-  <main>
+  <main> 
+      <section class="welcomesection">
       <div class="seminar-container">
       <div id="welcome"><h2>Welcome</h2></div>
       <button id="register" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Register</button>
@@ -411,7 +504,45 @@ footer {
   <a href="http://127.0.0.1:5500/bigbrother.html" class="center-link">Go back to the form</a>
 </div>
 
-
+<section> 
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <div class="content-container"><div class="imgcontainer"><img src="Media/fred.jpeg"></div>
+        <div class ="seminar-details">
+        <h2>Join us live with Fred Swaniker</h2>
+        <p>Fred Swaniker (born 1976) is a Ghanaian serial entrepreneur and leadership development expert on a mission to help the world's most extraordinary talent fulfil its potential. Swaniker recognized the importance of leadership and education while serving as the headmaster of a secondary school founded by his mother at the age of 17, and believed that the missing ingredient needed to transform Africa was good leadership. To solve that problem, he started the African Leadership Group – an ecosystem of organizations that are catalyzing a new era of ethical, entrepreneurial African leaders.</p>
+      </div></div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="content-container"><div class="imgcontainer"><img src="Media/vthem.jpg"></div>
+    <div class ="seminar-details">
+        <h2>Join us with Vusi Thembekwayo</h2>
+        <p>Vusi is a famous South African entrepreneur, author, international speaker, podcaster, investor, businessman, and social media influencer from Benoni, East Rand, Gauteng Province, South Africa. He is well-known in the country for his amazing entrepreneurship masterclass and quotes. Being a successful entrepreneur, he serves the position of Chief Executive Officer at MyGrowthFund Venture Partners.</p>
+      </div></div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="content-container"><div class="imgcontainer"><img src="Media/opper.png"></div>
+    <div class ="seminar-details">
+        <h2>We're going live with Jonathan M. E. Oppenheimer</h2>
+        <p>Jonathan M. E. Oppenheimer (born 18 November 1969) is a South African billionaire businessman and conservationist, and the Executive Chairman of Oppenheimer Generations,[1] a former executive of De Beers and a former vice-president of his family's firm, Anglo American Corporation. </p>
+      </div></div>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+</section>
+</section>
 <div class="video-row">
   <h1>Interested in learning Business?</h1>>
   <div class="video-container">
@@ -447,6 +578,35 @@ footer {
 
 <script>
 
+//script for live seminar slideshow/carousel
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
+//script for registration form
 const form = document.getElementById('myForm');
 	const thankYouMsg = document.getElementById('thankYouMsg');
 	
@@ -493,7 +653,7 @@ window.onclick = function(event) {
         formcontainer.style.display = "none";
     }
 }
-   </script>
+</script>
 
 </body>
 </html>
