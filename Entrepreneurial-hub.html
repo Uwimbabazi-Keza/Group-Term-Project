@@ -1,28 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Entrepreneurial AFRICA Entrepreneurial-hub</title>
-	<style>
-		
+	<title>Entrepreneurial Hub</title>
+<style>
+* {
+box-sizing: border-box;
+}	
 body {
-  max-width: 100%;
   margin: 0%;
   font-family: Arial, sans-serif;
 }
+
+main {
   
-.nav-bar {
-  margin: 0%;
-  max-width:inherit; 
-  overflow: hidden;
+  background-color: white;
+}
+
+.navbar {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0; 
   background-color: #F4FFFE;
-  box-shadow: 20px black;   
+  box-shadow: 0px 2px 2px 0px #B6B6B6;   
 }
 
 .nav {
   display: flex;
-  justify-content: flex-end;
+  justify-content:space-between;
 }
-.nav-bar a {
+
+.nav a {
   float: left;
   color: black;
   text-align: center;
@@ -32,43 +42,42 @@ body {
 }
 
 .logonav {
-    position: absolute; 
-    top: 0.7%;
+  position: relative;
 }
 
 .logonav img {
     border-radius:50%;
-    width: 40px;
-    height: 37px;
-    
+    width: 37px;
+    height: 34px;
+    margin: -20%;   
 }
 
 .nav a {
-  padding: 14px 50px 18px 50px;
-   
+  padding: 20px 50px 15px 50px;
 }
+
 .nav a:hover {
   background-color: #ddd;
 }
 
-.nav a.active {
-  background-color: #04AA6D;
-  color: white;
+.nav a:visited {
+  background-color: #ddd;
 }
 
 .nav .search-container{
-  float: right;
+  float: right; 
 }
 
 .nav input[type=text] {
-  padding: 6px;
-  margin-top: 10px;
-  font-size: 16px;
-  border: none;
+  padding: 5px;
+  margin-top: 16px;
+  font-size: 15px;
+  border-style: solid;
+  border-width: thin;
+  border-color: #B6B6B6;
 }
 
 @media screen and (max-width: 600px) {
-
   .nav a, .nav input[type=text], .nav .search-container button {
     float: none;
     display: block;
@@ -77,31 +86,198 @@ body {
     margin: 0;
     padding: 14px;
   }
+
   .nav input[type=text] {
     border: 1px solid #ccc;  
   }
 }
 
+.dropbtn {
+  background-color: #F4FFFE;
+  border: none;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 90%;
+  background-color: #150F2F;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: -1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: justify;
+  z-index: 1;
+  
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.welcomesection {
+  height: 680px;
+}
+
+#welcome {
+   width: fit-content;
+   position: relative;
+   top: 80px;
+   left: 10%;
+   font-size: 22px;
+   padding-bottom: 1%;  
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1120px;
+  max-height: 450px;
+  position: relative;
+  margin:auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  display: flex;
+  top: 20px;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 1120px;
+  height: 450px;
+}
+
+.imgcontainer {
+  width: 60%;
+  height: 100%;
+}
+
+.imgcontainer img {
+  width: 100%;
+  height: 100%;
+}
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color:#f0fffe;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 5px 2px;
+  background-color: #bbb; 
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #affaff;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+.seminar-details {
+  position: relative;
+  text-align:start;
+  width: fit-content;
+  height: 100%;
+  padding: 5%;
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.form-container {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 3; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;  
+} 
+
 form {
   width: 500px;
   margin: auto;
-  background-color: gray;
+  background-color: white;
   padding: 20px;
-  border-radius: 30px;
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
 }
 
+#registerhere {
+  color:white;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500px;
+  background-color:#150F2F;
+  padding: 10%;
+  margin: -20px -20px 0px;
+}
 label {
   display: block;
   margin-bottom: 20px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 input[type=text], input[type=email], select {
   width: 100%;
   padding: 8px;
-  border-radius: 5px;
-  border: black;
+  border: 1px solid rgb(83, 83, 83);
   margin-bottom: 20px;
   box-sizing: border-box;
 }
@@ -121,71 +297,6 @@ input[type=submit]:hover {
   background-color: white;
 }
 
-
-* {
-box-sizing: border-box;
-}
-
-
-/* Clearfix (clear floats) */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-h2{text-align: center;}
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 500px) {
-  .column {
-    width: 100%;
-  }
-}
-
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 100;
-}
-
-.column {
-  flex-basis: 33%;
-  padding: 10px;
-  margin: 150;
-}
-
-.row {
-  display: -moz-grid-line;
-  justify-content: center;
-  align-items: center;}
-
-  .column {
-  flex: 1;
-  text-align: center;
-  padding: 10px;
-}
-
-img {
-  width: 100%;
-  height: auto;
-}
-
-
-#submit {
-  display: block;
-  margin-top: 10px;
-}
-
-#submit{
-  display: inline-block;
-  margin-top: 10px;
-  vertical-align: middle;
-}
-
-
 .caption {
   position: center;
   bottom: 0;
@@ -199,18 +310,48 @@ img {
   height: 70%; /* set the height to 100% */
 }
 
+#register {
+  position: relative;
+  top: 430px;
+  left: 12.5%;
+  background-color: #FFFBA1;
+  border-radius: 25px;
+  border: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  padding: 15px 35px;
+  cursor: pointer;
+  z-index: 1;
+}
 
-button[type="submit"] {
-  background-color: #333;
-  color: green;
+.btns [type="submit"], [type="button"] {
+  background-color:#FFFBA1;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  color: rgb(0, 0, 0);
   padding: 10px 30px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  position: left;
 }
 
+.btns [type="button"] {
+  background-color:#f0fffe;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  color: rgb(0, 0, 0);
+  padding: 10px 30px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
+.btns {
+  display: flex;
+  margin-top: 5%;
+}
+
+.cancelbtn {
+  position: relative;
+  left: 250%
+}
 .hidden {
 	display: none;
 }
@@ -219,21 +360,24 @@ button[type="submit"] {
 	position: relative;
 	top: 10%;
 	left: 50%;
-	transform: translate(-10%, -10%);
 }
 
-
 .video-container {
-  display: flex;
   overflow-x: scroll;
   padding: 20px;
   overflow: auto;
 }
 
+.video-row h1{
+  width: 100%;
+  color: white;
+  text-align: justify;
+  width: 60%;
+  padding: 2% 0% 0% 3%;
+}
 .video-container video {
-  flex: 1;
+  display: inline-flex;
   max-height: 200px;
-  border: 1px solid black;
   width: 300px;
   height: 200px;
   margin-right: 20px;
@@ -244,21 +388,22 @@ button[type="submit"] {
   height: 240px;
   margin-right: 10px;
   padding: 20px;
+  position:relative;
+  top: 10%;
+  
 }
 
 .video-row {
   display: flex;
+  flex-direction: column;
+  position: relative;
   overflow-x: scroll;
+  background-color: #150F2F;
+  height: 500px;
   padding: 10px;
 }
 
 
-
-.container {
-  position: relative;
-  width: 500px;
-  overflow: hidden;
-}
 .left-btn, .right-btn {
   position: absolute;
   top: 50%;
@@ -270,36 +415,36 @@ button[type="submit"] {
   cursor: pointer;
 }
 
-  footer {
-  background-color: black;
-  margin-bottom: -2rem;
-  margin-left: -0.5rem;
-  margin-right: -0.5rem;
-  margin-top: 6rem;
+body > footer {
+  position: sticky;
+  top: 100vh;
+}
+
+footer {
+  background-color: #150F2F;
   padding: 2rem;
   color: white;
   padding: 2rem;
   display: flex;
-  max-height: 100%;
-   
+  height: 20%;
+  border-top: white;  
 }
 
 .youngcapabletag  {
-  flex-grow: 100;
+  flex-grow: 17;
   text-align: left;
-  margin-top: 1%;  
+  margin-top: 1%;
+  font-size: 20px;  
 }
     
 .socials {
-    display: inline-flex;
-    flex-grow: 2;
-    margin-top: 1.5%;
-    width: 20%; 
-    height: 20%;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-top: 1.5% 
 }
 
 .socials a {
-    margin: 7%;
+    margin: 1%;
 }
 
 
@@ -324,55 +469,65 @@ button[type="submit"] {
 
 </head>
 <body>
+<<<<<<< HEAD
 	<h2>Entrepreneurship Hub for Africans</h2>
 <p>This is a platform which connect budding entrepreneurs to established ones through seminars and provide them with tools for success. The goals of the platform will be to connect, empower, and educate aspiring entrepreneurs. Participants will have an opportunity to raise questions and participate in peer to peer mentoring. This will hopefully lead to a better understanding of entrepreneurship and result in new business ventures and jobs for the community. 
 </p>
+=======
+  <div class="navbar">
+    <div class = "nav">
+      <a href="Home.html" class = "logonav"><img src="Media/Young.png" alt="logo"/></a>
+        <a href="Opportunity-Board.html">Opportunity Board</a>
+        <a href="Discussion_forum.html">Discussion Forum</a>
+        
+        <div class="dropdown">
+        <div class="dropbtn"><a href="Entrepreneurial-hub.html">Learning Hub</a></div>
+          <div class="dropdown-content">
+            <a href="#">Recorded Seminars</a>
+            <a href="#">Development</a>
+            <a href="#">Marketing</a>
+            <a href="#">Business</a>
+            <a href="#">Finance</a>
+            <a href="#">Career Guidance</a>
+          </div>
+        </div>
+        
+        <div class="search-container">
+          <input type="text" placeholder="Search.." name="search">
+        </div>
+        <a href="#userdashboard">User</a>
+    </div>
+    </div>
+  <main> 
+      <section class="welcomesection">
+      <div id="welcome"><h2>Welcome to the Entrepreneurial Hub</h2></div>
+      <button id="register" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Register</button>
+      <div id="id01" class="form-container">
+      <form id="myForm">
+        <h3 id="registerhere">Young&Capable<h3>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="seminar">Seminar:</label>
+        <select id="seminar" name="seminar" required>
+        <option value="">Select a seminar</option>
+        <option value="seminar1">Seminar 1</option>
+        <option value="seminar2">Seminar 2</option>
+        <option value="seminar3">Seminar 3</option>
+        </select>
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+        <div class="btns">
+        <div id="submit"><button type="submit">Submit</button></div>
+        <div id="cancelbtn"><button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button></div>
+        </div>
+      </form>
+      </div>
+      
+>>>>>>> 7c471f69ce604ac8b23799016ce8c333e2b448f2
 
-<div class="row">
-  <div class="column">
-    <img src="Media/fred.jpeg" alt="Snow" style="width:50%">
-         <h2>Seminar 1</h2>
-    <div class="caption">Fred Swaniker (born 1976) is a Ghanaian serial entrepreneur and leadership development expert on a mission to help the world's most extraordinary talent fulfil its potential. Swaniker recognized the importance of leadership and education while serving as the headmaster of a secondary school founded by his mother at the age of 17, and believed that the missing ingredient needed to transform Africa was good leadership. To solve that problem, he started the African Leadership Group – an ecosystem of organizations that are catalyzing a new era of ethical, entrepreneurial African leaders.</div>
-  </div>
-  <div class="column">
-    <img src="Media/vthem.jpg" alt="Forest" style="width:50%">
-    <h2>Seminar 2</h2>
-    <div class="caption"><strong>Vusi Thembekwayo</strong> is a famous South African entrepreneur, author, international speaker, podcaster, investor, businessman, and social media influencer from Benoni, East Rand, Gauteng Province, South Africa. He is well-known in the country for his amazing entrepreneurship masterclass and quotes. Being a successful entrepreneur, he serves the position of Chief Executive Officer at MyGrowthFund Venture Partners.</div>
-  </div>
-  <div class="column">
-    <img src="Media/opper.png" alt="Mountains" style="width: 73%">
-    <h2>Seminar 3</h2>
-    <div class="caption"><h3>Jonathan M. E. Oppenheimer (born 18 November 1969) is a South African billionaire businessman and conservationist, and the Executive Chairman of Oppenheimer Generations,[1] a former executive of De Beers and a former vice-president of his family's firm, Anglo American Corporation. </h3></div>
-  </div>
-</div>
-
-	  
-<div>
-  <form id="myForm">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
-
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-
-    <label for="seminar">Seminar:</label>
-    <select id="seminar" name="seminar" required>
-      <option value="">Select a seminar</option>
-      <option value="seminar1">Seminar 1</option>
-      <option value="seminar2">Seminar 2</option>
-      <option value="seminar3">Seminar 3</option>
-    </select>
-
-    <label for="date">Date:</label>
-    <input type="date" id="date" name="date" required>
-    
-    <h4>
-      <button type="submit">Submit</button>
-    </h4>
-  </form>
-</div>
-
-<div id="thankYouMsg" style="display:none;">
+<form id="thankYouMsg" style="display:none;">
   <h3>Thank you for your submission!</h3>
   <p>We have received your registration for the following seminar:</p>
   <ul>
@@ -382,11 +537,52 @@ button[type="submit"] {
     <li><strong>Date:</strong> <span id="dateOutput"></span></li>
   </ul>
   <a href="http://127.0.0.1:5500/bigbrother.html" class="center-link">Go back to the form</a>
+</form>
+
+<section> 
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <div class="content-container"><div class="imgcontainer"><img src="Media/fred.jpeg"></div>
+        <div class ="seminar-details">
+        <h2>Join us live with Fred Swaniker</h2>
+        <p>Fred Swaniker (born 1976) is a Ghanaian serial entrepreneur and leadership development expert on a mission to help the world's most extraordinary talent fulfil its potential. Swaniker recognized the importance of leadership and education while serving as the headmaster of a secondary school founded by his mother at the age of 17, and believed that the missing ingredient needed to transform Africa was good leadership. To solve that problem, he started the African Leadership Group – an ecosystem of organizations that are catalyzing a new era of ethical, entrepreneurial African leaders.</p>
+      </div></div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="content-container">
+        <div class="imgcontainer"><img src="Media/vthem.jpg"></div>
+    <div class ="seminar-details">
+        <h2>Join us with Vusi Thembekwayo</h2>
+        <p>Vusi is a famous South African entrepreneur, author, international speaker, podcaster, investor, businessman, and social media influencer from Benoni, East Rand, Gauteng Province, South Africa. He is well-known in the country for his amazing entrepreneurship masterclass and quotes. Being a successful entrepreneur, he serves the position of Chief Executive Officer at MyGrowthFund Venture Partners.</p>
+      </div></div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="content-container"><div class="imgcontainer"><img src="Media/opper.png"></div>
+    <div class ="seminar-details">
+        <h2>We're going live with Jonathan M. E. Oppenheimer</h2>
+        <p>Jonathan M. E. Oppenheimer (born 18 November 1969) is a South African billionaire businessman and conservationist, and the Executive Chairman of Oppenheimer Generations,[1] a former executive of De Beers and a former vice-president of his family's firm, Anglo American Corporation. </p>
+      </div></div>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+</section>
 </div>
-
-
-
+</section>
 <div class="video-row">
+  <h1>Interested in learning Business?</h1>>
+  <div class="video-container">
   <video class="video" controls title="Vusi">
     <source src="Joeboy-Body-and-Soul-Video-(TrendyBeatz.com).mp4" type="video/mp4">
   </video>
@@ -402,21 +598,52 @@ button[type="submit"] {
   <video class="video" controls title="Video 5">
     <source src="video5.mp4" type="video/mp4"> 
   </video>
+  </div>
 </div>
+</main>
 
 <footer>
   <div class="youngcapabletag">
           <p>@youngandcapable</p>
   </div>
   <div class="socials">
-       <a href="Home.html"><img src="Media/Facebook_White.svg" ></a>
-       <a href="Home.html"><img src="Media/Twitter_White.svg"></a>
-       <a href="Home.html"><img src="Media/Instagram_White.svg"></a>
+       <a href="Home.html"><img src="Media/Facebook_White.svg" width="40px" height="40px"></a>
+       <a href="Home.html"><img src="Media/Twitter_White.svg" width="40px" height="40px"></a>
+       <a href="Home.html"><img src="Media/Instagram_White.svg" width="40px" height="40px"></a>
   </div>
 </footer>
 
 <script>
 
+//script for live seminar slideshow/carousel
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
+//script for registration form
 const form = document.getElementById('myForm');
 	const thankYouMsg = document.getElementById('thankYouMsg');
 	
@@ -440,10 +667,6 @@ const form = document.getElementById('myForm');
 		thankYouMsg.style.display = 'block';
 	});
 
-   </script>
-
-
-<script>
 
 const container = document.querySelector('.container');
     const leftBtn = document.querySelector('.left-btn');
@@ -458,7 +681,21 @@ const container = document.querySelector('.container');
     });
 
 
-   </script>
+// Function that displays register form when button is clicked and displays thank you message after
+const formcontainer = document.getElementById('id01');
+const thankyoumessage = document.getElementById('thankYouMsg')
+
+// When the user clicks anywhere outside of the form, close it
+window.onclick = function(event) {
+    if (event.target == formcontainer) {
+        formcontainer.style.display = "none";
+    }
+
+    if (event.target == thankyoumessage) {
+        thankyoumessage.style.display = "none";
+    }
+}
+</script>
 
 </body>
 </html>
