@@ -9,36 +9,86 @@
 			margin: 0;
 			padding: 0;
 		}
-		.header {
-			background-color: #333;
-			color: #fff;
-			padding: 20px;
-			text-align: center;
-		}
+		
 		.container {
 			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			align-items: center;
-			margin: 20px;
+			flex-direction: column;
+			justify-content:left;
+			align-items:start;
+			margin: 40px 0px 50px 140px;
 		}
+
+		.connecttitle {
+			font-size: 22px;
+			padding-bottom: 1%; 
+			width: fit-content;
+			margin-top: 100px;
+			margin-left: 150px;
+		}
+
+		.filter-and-searchbar {
+			display: flex;
+			flex-direction: row;
+		}
+
+		.filter {
+			display: flex;
+			flex-direction: row;
+			list-style-type: none;
+			
+		}
+
+		.filter h3 {
+			margin-left: 165px;
+		}
+
+		.li {
+			margin-top: 22px;
+			margin-left: 30px;
+		}
+
+		.li a {
+			margin-left: 20px;
+		}
+
+		.opp-searchbar input[type=text] {
+			border-radius: 25px;
+			border-style: solid;
+			border-width: thin;
+			border-color: #B6B6B6;
+			box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+			width: 170px;
+			height: 25px;
+			margin-top: 11px;
+			margin-left: 300px;
+			font-size: 12px;
+			
+			
+		}
+
 		.card {
 			background-color: #f2f2f2;
 			border-radius: 5px;
 			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 			margin: 10px;
 			padding: 20px;
-			width: 300px;
+			width: 1000px;
+			height: 100px;
 			display: flex;
-			flex-direction: row; /* arrange cards horizontally */
-			align-items: center;
+			flex-direction: row;
+			align-items:start;
+		}
+		
+		.oppinfo {
+			display: flex;
+			flex-direction: column;
 		}
 		.card h2 {
-			font-size: 24px;
+			font-size: 20px;
 			margin: 0 0 10px 0;
 		}
 		.card p {
-			font-size: 16px;
+			font-size: 12px;
 			margin: 0;
 		}
 		.card a {
@@ -47,23 +97,25 @@
 			border-radius: 5px;
 			color: #fff;
 			cursor: pointer;
-			font-size: 16px;
-			margin-top: 10px;
+			font-size: 13px;
+			margin-top: 12px;
+			margin-left: 200px;
 			padding: 10px;
-			width: 100%;
+			width: 90px;
 			text-decoration: none;
 			text-align: center;
-			display: block;
+			
 		}
 
-		.navbar {
+.navbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   margin: 0; 
   background-color: #F4FFFE;
-  box-shadow: 0px 2px 2px 0px #B6B6B6;   
+  box-shadow: 0px 2px 2px 0px #B6B6B6;
+  z-index: 1;   
 }
 
 .nav {
@@ -153,8 +205,7 @@
   text-decoration: none;
   display: block;
   text-align: justify;
-  z-index: 1;
-  
+  z-index: 1; 
 }
 
 .dropdown-content a:hover {
@@ -202,7 +253,6 @@ footer {
 	</style>
 </head>
 <body>
-	<main>
 	<div class="navbar">
 		<div class = "nav">
 		  <a href="Home.html" class = "logonav"><img src="Media/Young.png" alt="logo"/></a>
@@ -227,21 +277,50 @@ footer {
 			<a href="#userdashboard">User</a>
 		</div>
 		</div>
+
+	<main>
+	<div class="connecttitle"><h1>Connect</h1></div>
+	
+	<div class="filter-and-searchbar">
+		<div class="filter">
+			<h3>Filter:</h3>
+			<div class="li">
+				<li>
+				<a href="#">Earliest</a>
+				<a href="#">Internships</a>
+				<a href="#">Jobs</a>
+				<a href="#">Volunteering</a>
+				<a href="#">Funding</a>
+				<li>
+				</div>
+		</div>
 		
+		<div class="opp-searchbar">
+			<input type="text" placeholder="Search.." name="search">
+		</div>
+	</div>
+
 	<div class="container">
 		<div class="card">
-			<h2>Job Opportunity</h2>
-			<p>We are hiring a full-stack developer to join our team. The ideal candidate should have experience in React, Node.js, and MongoDB.</p>
+			<div class="oppinfo">
+				<h2>Job Opportunity</h2>
+				<p>We are hiring a full-stack developer to join our team. The ideal candidate should have experience in React, Node.js, and MongoDB.</p>
+			</div>
 			<a href="https://www.example.com/job-application">Apply Now</a>
 		</div>
 		<div class="card">
-			<h2>Internship Opportunity</h2>
-			<p>We are looking for a motivated intern to join our marketing team. The internship is unpaid, but offers valuable experience and networking opportunities.</p>
+			<div class="oppinfo">
+				<h2>Internship Opportunity</h2>
+				<p>We are looking for a motivated intern to join our marketing team. The internship is unpaid, but offers valuable experience and networking opportunities.</p>
+			</div>
 			<a href="https://www.example.com/internship-application">Apply Now</a>
+			
 		</div>
 		<div class="card">
-			<h2>Volunteer Opportunity</h2>
-			<p>We are seeking volunteers to help with our annual charity event. This is a great opportunity to give back to the community and make a difference.</p>
+			<div class="oppinfo">
+				<h2>Volunteer Opportunity</h2>
+				<p>We are seeking volunteers to help with our annual charity event. This is a great opportunity to give back to the community and make a difference.</p>
+			</div>
 			<a href="https://www.example.com/volunteer-application">Apply Now</a>
 		</div>
 	</div>
@@ -262,8 +341,3 @@ footer {
 	</script>
 </body>
 </html>
-
-
-
-
-
