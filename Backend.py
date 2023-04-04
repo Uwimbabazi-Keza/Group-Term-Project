@@ -16,10 +16,10 @@ def signin_view(request):
             SignIn.objects.create(user=user, ip_address=request.META.get('REMOTE_ADDR'))
             if not request.POST.get('remember_me', None):
                 request.session.set_expiry(0)
-            else:
-                # Set session expiration to two weeks if "remember me" is checked
-            return redirect('home')
     else:
+                # Set session expiration to two weeks if "remember me" is checked
+                # return redirect('home')
+                # else:
         form = AuthenticationForm()
     return render(request, 'signin.html', {'form': form})
 
