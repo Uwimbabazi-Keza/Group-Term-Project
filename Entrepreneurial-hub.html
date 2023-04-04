@@ -135,12 +135,11 @@ main {
 }
 
 #welcome {
-   width: fit-content;
-   position: relative;
-   top: 80px;
-   left: 10%;
-   font-size: 22px;
-   padding-bottom: 1%;  
+  font-size: 22px;
+	padding-bottom: 1%; 
+	width: fit-content;
+	margin-top: 130px;
+	margin-left: 150px;  
 }
 
 /* Slideshow container */
@@ -148,10 +147,9 @@ main {
   max-width: 1120px;
   max-height: 450px;
   position: relative;
-  margin:auto;
+  margin: -40px 120px 10px 120px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   display: flex;
-  top: 20px;
 }
 
 .content-container {
@@ -255,6 +253,7 @@ main {
 form {
   width: 500px;
   margin: auto;
+  margin-bottom: 20px;
   background-color: white;
   padding: 20px;
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
@@ -313,7 +312,7 @@ input[type=submit]:hover {
 
 #register {
   position: relative;
-  top: 430px;
+  top: 380px;
   left: 12.5%;
   background-color: #FFFBA1;
   border-radius: 25px;
@@ -359,62 +358,101 @@ input[type=submit]:hover {
 
 #thankYouMsg {
 	position: relative;
-	top: 10%;
-	left: 50%;
+	margin: auto;
 }
 
-.video-container {
-  overflow-x: scroll;
-  overflow-y: hidden;
-  padding: 20px;
-  overflow: auto;
-}
-
-.video-row h1{
-  width: 100%;
-  color: white;
-  text-align: justify;
-  width: 60%;
-  padding: 2% 0% 0% 3%;
-}
-.video-container video {
-  display: inline-flex;
-  max-height: 200px;
-  width: 300px;
-  height: 200px;
-  margin-right: 20px;
-}
-
-.video {
-  width: 320px;
-  height: 240px;
-  margin-right: 10px;
-  padding: 20px;
-  position:relative;
-  top: 10%;
-  
-}
-
-.video-row {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  overflow-x: scroll;
+#learning-content-carousel {
   background-color: #150F2F;
-  height: 500px;
-  padding: 10px;
 }
 
+.carousel-title {
+  color: white;
+  margin-left: 120px;
+  padding-top: 40px;
+  width: fit-content;
+  font-size: 25px;
+}
 
-.left-btn, .right-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 30px;
-  height: 30px;
-  background-color: #ccc;
-  border: none;
-  cursor: pointer;
+.center {
+	 align-items: center;
+	 display: flex;
+	 flex-direction: column;
+	 height: 100%;
+	 justify-content: center;
+
+}
+ .wrapper {
+	 display: flex;
+	 grid-gap: 1em;
+	 overflow: hidden;
+	 width: 55em;
+   
+}
+ .wrapper > .inner {
+	 display: flex;
+	 grid-gap: 2em;
+	 transition: all 1s ease-in-out;
+   height: fit-content;
+}
+ .card {
+	 border-radius: 0.5em;
+	 box-shadow: 0px 0px 4px rgba(218, 218, 218, 0.5);
+   width: 300px;
+   height: fit-content;
+   margin-top: 4rem;
+   
+}
+ .card > iframe {
+	 border-top-right-radius: inherit;
+	 border-top-left-radius: inherit;
+	 display: block;
+	 width: 300px;
+}
+ .card > .content {
+	 background: white;
+	 border-bottom-left-radius: inherit;
+	 border-bottom-right-radius: inherit;
+	 padding: 1em;
+	 text-align:left;
+}
+
+ .card > .content > h1, .card > .content > p {
+	 margin: 0.35rem 0;
+}
+ .card > .content > h1 {
+	 color: black;
+	 font-size: 1.25rem;
+	 line-height: 1;
+}
+ .card > .content > p {
+	 color: black;
+	 font-size: 0.9rem;
+	 font-weight: 300;
+}
+ .map {
+	 margin-top: 1em;
+}
+ .map > button {
+	 all: unset;
+	 background: white;
+	 cursor: pointer;
+	 margin: 0 0.125em;
+	 position: relative;
+	 user-select: none;
+	 border-radius: 100%;
+	 height: 10px;
+	 width: 10px;
+}
+ .map > button.active:after {
+	 background:#150F2F;
+	 content: "";
+	 left: 50%;
+	 position: absolute;
+	 transform: translate(-50%, -50%);
+	 top: 50%;
+	 border-radius: 100%;
+	 height: 0.5em;
+	 width: 0.5em;
 }
 
 body > footer {
@@ -448,147 +486,207 @@ footer {
 .socials a {
     margin: 1%;
 }
-	</style>
 
-
+</style>
 </head>
 <body>
-  <div class="navbar">
-    <div class = "nav">
-      <a href="Home.html" class = "logonav"><img src="Media/Young.png" alt="logo"/></a>
-        <a href="Opportunity-Board.html">Opportunity Board</a>
-        <a href="Discussion_forum.html">Discussion Forum</a>
+
+    <div class="navbar">
+        <div class = "nav">
+          <a href="Home.html" class = "logonav"><img src="Media/Young.png" alt="logo"/></a>
+            <a href="Opportunity-Board.html">Opportunity Board</a>
+            <a href="Discussion_forum.html">Discussion Forum</a>
+            
+            <div class="dropdown">
+            <div class="dropbtn"><a href="Entrepreneurial-hub.html">Learning Hub</a></div>
+              <div class="dropdown-content">
+                <a href="#learning-content-carousel">Recorded Seminars</a>
+                <a href="#">Development</a>
+                <a href="#">Marketing</a>
+                <a href="#">Business</a>
+                <a href="#">Finance</a>
+                <a href="#">Career Guidance</a>
+              </div>
+            </div>
+            
+            <div class="search-container">
+              <input type="text" placeholder="Search.." name="search">
+            </div>
+            <a href="User-dashboard.html">User</a>
+        </div>
+        </div>
+      <main> 
+          <section class="welcomesection">
+          <div id="welcome"><h2>Welcome to the Entrepreneurial Hub</h2></div>
+          <button id="register" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Register</button>
+          <div id="id01" class="form-container">
+          <form id="myForm">
+            <h3 id="registerhere">Young&Capable<h3>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="seminar">Seminar:</label>
+            <select id="seminar" name="seminar" required>
+            <option value="">Select a seminar</option>
+            <option value="seminar1">Seminar 1</option>
+            <option value="seminar2">Seminar 2</option>
+            <option value="seminar3">Seminar 3</option>
+            </select>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            <div class="btns">
+            <div id="submit"><button type="submit">Submit</button></div>
+            <div id="cancelbtn"><button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button></div>
+            </div>
+          </form>
+          </div>
+          
+    
+    <form id="thankYouMsg" style="display:none;">
+      <h3>Thank you for your submission!</h3>
+      <p>We have received your registration for the following seminar:</p>
+      <ul>
+        <li><strong>Name:</strong> <span id="nameOutput"></span></li>
+        <li><strong>Email:</strong> <span id="emailOutput"></span></li>
+        <li><strong>Seminar:</strong> <span id="seminarOutput"></span></li>
+        <li><strong>Date:</strong> <span id="dateOutput"></span></li>
+      </ul>
+      <a href="http://127.0.0.1:5500/bigbrother.html" class="center-link">Go back to the form</a>
+    </form>
+    
+    <section> 
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="content-container"><div class="imgcontainer"><img src="Media/fred.jpeg"></div>
+            <div class ="seminar-details">
+            <h2>Join us live with Fred Swaniker</h2>
+            <p>Fred Swaniker (born 1976) is a Ghanaian serial entrepreneur and leadership development expert on a mission to help the world's most extraordinary talent fulfil its potential. Swaniker recognized the importance of leadership and education while serving as the headmaster of a secondary school founded by his mother at the age of 17, and believed that the missing ingredient needed to transform Africa was good leadership. To solve that problem, he started the African Leadership Group – an ecosystem of organizations that are catalyzing a new era of ethical, entrepreneurial African leaders.</p>
+          </div></div>
+        </div>
         
-        <div class="dropdown">
-        <div class="dropbtn"><a href="Entrepreneurial-hub.html">Learning Hub</a></div>
-          <div class="dropdown-content">
-            <a href="#">Recorded Seminars</a>
-            <a href="#">Development</a>
-            <a href="#">Marketing</a>
-            <a href="#">Business</a>
-            <a href="#">Finance</a>
-            <a href="#">Career Guidance</a>
+        <div class="mySlides fade">
+          <div class="content-container">
+            <div class="imgcontainer"><img src="Media/vthem.jpg"></div>
+        <div class ="seminar-details">
+            <h2>Join us with Vusi Thembekwayo</h2>
+            <p>Vusi is a famous South African entrepreneur, author, international speaker, podcaster, investor, businessman, and social media influencer from Benoni, East Rand, Gauteng Province, South Africa. He is well-known in the country for his amazing entrepreneurship masterclass and quotes. Being a successful entrepreneur, he serves the position of Chief Executive Officer at MyGrowthFund Venture Partners.</p>
+          </div></div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="content-container"><div class="imgcontainer"><img src="Media/opper.png"></div>
+        <div class ="seminar-details">
+            <h2>We're going live with Jonathan M. E. Oppenheimer</h2>
+            <p>Jonathan M. E. Oppenheimer (born 18 November 1969) is a South African billionaire businessman and conservationist, and the Executive Chairman of Oppenheimer Generations,[1] a former executive of De Beers and a former vice-president of his family's firm, Anglo American Corporation. </p>
+          </div></div>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+    </section>
+    </section>    
+
+<section id="learning-content-carousel">
+    <div class="carousel-title"><h1>Interested in learning more?</h1></div>
+    <div class="center">
+        <div class="wrapper">
+          <div class="inner">
+            <div class="card">
+                <iframe src="https://www.youtube.com/embed/PgbjBI8RpkU" title="Vusi Thembekwayo | How to pitch your business" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <div class="content">
+                <h1>Vusi Thembekwayo| How to pitch your business</h1>
+                <p>Watch as Vusi enlightens you on whether you're on the right track of your journey as an entrepreneur.</p>
+              </div>
+            </div>
+            <div class="card">
+                <iframe src="https://www.youtube.com/embed/p7VD3eP_ZKU" title="Vusi Thembekwayo - Day 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <div class="content">
+                <h1>Vusi Thembekwayo| How to pitch your business</h1>
+                <p>Watch as Vusi enlightens you on whether you're on the right track of your journey as an entrepreneur.</p>
+              </div>
+            </div>
+            <div class="card">
+                <iframe src="https://www.youtube.com/embed/Etkls2ULe2k" title="Money Mistakes women should avoid with Kim Potgieter" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <div class="content">
+                <h1>Money Mistakes women should avoid with Kim Potgieter</h1>
+                <p>Kim Potigieter joins Mapalo Makhu as they talk about what women should not do with their money.</p>
+              </div>
+            </div>
+            <div class="card">
+                <iframe src="https://www.youtube.com/embed/POVl8cpCZSQ" title="How to Manage Your Money as a Freelancer with Gugulethu Mfuphi" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <div class="content">
+                <h1>How to Manage Your Money as a Freelancer with Gugulethu Mfuphi</h1>
+                <p>Mapalo Makhu sits down with Gugulethu Mfuphi; an award-winning broadcaster and financial journalist to discuss managing money as a freelancer. </p>
+              </div>
+            </div>
+            <div class="card">
+                <iframe src="https://www.youtube.com/embed/hZbrIggaSdg" title="5 Businesses I THINK YOU should try in 2023" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <div class="content">
+                <h1>12 ways to become good with your money in 2023</h1>
+                <p>Nicolette Mashile, also known as the 'Financial Bunny', shares her insights into financial matters.</p>
+              </div>
+            </div>
+            <div class="card">
+                <iframe src="https://www.youtube.com/embed/dIQssogV6FM" title="Musing: Data Is King" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </iframe>
+              <div class="content">
+                <h1>Vusi Thembekwayo| How to pitch your business</h1>
+                <p>Watch as Vusi enlightens you on whether you're on the right track of your journey as an entrepreneur.</p>
+              </div>
+            </div>
+            <div class="card">
+                <iframe src="https://www.youtube.com/embed/wa5Dt2busNA" title="4 Lessons About What It Takes To Be An Entrepreneur by Fred Swaniker" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <div class="content">
+                <h1>4 Lessons About What It Takes To Be An Entrepreneur by Fred Swaniker</h1>
+                <p>Fred Swaniker, an established social entrepreneur and the Founder of African Leadership University, highlights the importance of people, interviews, practice and letting go.</p>
+              </div>
+            </div>
+            <div class="card">
+                <iframe src="https://www.youtube.com/embed/IpNkuxzAeRs" title="12 ways to become good with your money in 2023" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <div class="content">
+                <h1>12 ways to become good with your money in 2023</h1>
+                <p>Nicolette Mashile, also known as the 'Financial Bunny', shares her insights into financial matters.</p>
+              </div>
+            </div>
+            <div class="card">
+                <iframe src="https://www.youtube.com/embed/7rh2tvk-QDM" title="Vusi Thembekwayo - Keynote Speaker Speech - ALU Graduation" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <div class="content">
+                <h1>Vusi Thembekwayo| How to pitch your business</h1>
+                <p>Watch as Vusi enlightens you on whether you're on the right track of your journey as an entrepreneur.</p>
+              </div>
+            </div>
           </div>
         </div>
         
-        <div class="search-container">
-          <input type="text" placeholder="Search.." name="search">
+        <div class="map">
+          <button class="active first"></button>
+          <button class="second"></button>
+          <button class="third"></button>
         </div>
-        <a href="#userdashboard">User</a>
-    </div>
-    </div>
-  <main> 
-      <section class="welcomesection">
-      <div id="welcome"><h2>Welcome to the Entrepreneurial Hub</h2></div>
-      <button id="register" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Register</button>
-      <div id="id01" class="form-container">
-      <form id="myForm">
-        <h3 id="registerhere">Young&Capable<h3>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <label for="seminar">Seminar:</label>
-        <select id="seminar" name="seminar" required>
-        <option value="">Select a seminar</option>
-        <option value="seminar1">Seminar 1</option>
-        <option value="seminar2">Seminar 2</option>
-        <option value="seminar3">Seminar 3</option>
-        </select>
-        <label for="date">Date:</label>
-        <input type="date" id="date" name="date" required>
-        <div class="btns">
-        <div id="submit"><button type="submit">Submit</button></div>
-        <div id="cancelbtn"><button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button></div>
-        </div>
-      </form>
       </div>
-      
-
-<form id="thankYouMsg" style="display:none;">
-  <h3>Thank you for your submission!</h3>
-  <p>We have received your registration for the following seminar:</p>
-  <ul>
-    <li><strong>Name:</strong> <span id="nameOutput"></span></li>
-    <li><strong>Email:</strong> <span id="emailOutput"></span></li>
-    <li><strong>Seminar:</strong> <span id="seminarOutput"></span></li>
-    <li><strong>Date:</strong> <span id="dateOutput"></span></li>
-  </ul>
-  <a href="http://127.0.0.1:5500/bigbrother.html" class="center-link">Go back to the form</a>
-</form>
-
-<section> 
-  <div class="slideshow-container">
-    <div class="mySlides fade">
-      <div class="content-container"><div class="imgcontainer"><img src="Media/fred.jpeg"></div>
-        <div class ="seminar-details">
-        <h2>Join us live with Fred Swaniker</h2>
-        <p>Fred Swaniker (born 1976) is a Ghanaian serial entrepreneur and leadership development expert on a mission to help the world's most extraordinary talent fulfil its potential. Swaniker recognized the importance of leadership and education while serving as the headmaster of a secondary school founded by his mother at the age of 17, and believed that the missing ingredient needed to transform Africa was good leadership. To solve that problem, he started the African Leadership Group – an ecosystem of organizations that are catalyzing a new era of ethical, entrepreneurial African leaders.</p>
-      </div></div>
-    </div>
-    
-    <div class="mySlides fade">
-      <div class="content-container">
-        <div class="imgcontainer"><img src="Media/vthem.jpg"></div>
-    <div class ="seminar-details">
-        <h2>Join us with Vusi Thembekwayo</h2>
-        <p>Vusi is a famous South African entrepreneur, author, international speaker, podcaster, investor, businessman, and social media influencer from Benoni, East Rand, Gauteng Province, South Africa. He is well-known in the country for his amazing entrepreneurship masterclass and quotes. Being a successful entrepreneur, he serves the position of Chief Executive Officer at MyGrowthFund Venture Partners.</p>
-      </div></div>
-    </div>
-    
-    <div class="mySlides fade">
-      <div class="content-container"><div class="imgcontainer"><img src="Media/opper.png"></div>
-    <div class ="seminar-details">
-        <h2>We're going live with Jonathan M. E. Oppenheimer</h2>
-        <p>Jonathan M. E. Oppenheimer (born 18 November 1969) is a South African billionaire businessman and conservationist, and the Executive Chairman of Oppenheimer Generations,[1] a former executive of De Beers and a former vice-president of his family's firm, Anglo American Corporation. </p>
-      </div></div>
-    </div>
-    
-    <a class="prev" onclick="plusSlides(-1)">❮</a>
-    <a class="next" onclick="plusSlides(1)">❯</a>
-    
-    </div>
-    <br>
-    
-    <div style="text-align:center">
-      <span class="dot" onclick="currentSlide(1)"></span> 
-      <span class="dot" onclick="currentSlide(2)"></span> 
-      <span class="dot" onclick="currentSlide(3)"></span> 
-    </div>
 </section>
-</section>
-<div class="video-row">
-  <h1>Interested in learning Business?</h1>>
-  <div class="video-container">
-  <video class="video" controls title="Vusi">
-    <source src=https://www.youtube.com/watch?v=6NrvX3ifofc type="video/mp4">
-  </video>
-  <video class="video" controls title="Video 2">
-    <source src="video" type="video/mp4">
-  </video>
-  <video class="video" controls title="Video 3">
-    <source src="Ruger-Asiwaju-Video-(TrendyBeatz.com).mp4" type="video/mp4"> 
-  </video>
-  <video class="video" controls title="Video 4">
-    <source src="video4.mp4" type="video/mp4">
-  </video>
-  <video class="video" controls title="Video 5">
-    <source src="video5.mp4" type="video/mp4"> 
-  </video>
-  </div>
-</div>
 </main>
 
 <footer>
-  <div class="youngcapabletag">
-          <p>@youngandcapable</p>
-  </div>
-  <div class="socials">
-       <a href="Home.html"><img src="Media/Facebook_White.svg" width="40px" height="40px"></a>
-       <a href="Home.html"><img src="Media/Twitter_White.svg" width="40px" height="40px"></a>
-       <a href="Home.html"><img src="Media/Instagram_White.svg" width="40px" height="40px"></a>
-  </div>
-</footer>
+    <div class="youngcapabletag">
+            <p>@youngandcapable</p>
+    </div>
+    <div class="socials">
+         <a href="Home.html"><img src="Media/Facebook_White.svg" width="40px" height="40px"></a>
+         <a href="Home.html"><img src="Media/Twitter_White.svg" width="40px" height="40px"></a>
+         <a href="Home.html"><img src="Media/Instagram_White.svg" width="40px" height="40px"></a>
+    </div>
+  </footer>
 
 <script>
 
@@ -660,19 +758,37 @@ const container = document.querySelector('.container');
 
 // Function that displays register form when button is clicked and displays thank you message after
 const formcontainer = document.getElementById('id01');
-const thankyoumessage = document.getElementById('thankYouMsg')
 
 // When the user clicks anywhere outside of the form, close it
 window.onclick = function(event) {
-    if (event.target == formcontainer) {
-        formcontainer.style.display = "none";
-    }
-
-    if (event.target == thankyoumessage) {
-        thankyoumessage.style.display = "none";
+    if (event.target == form) {
+        form.style.display = "none";
     }
 }
 </script>
 
+<script>
+//handles the learning resources carousel
+const buttonsWrapper = document.querySelector(".map");
+const slides = document.querySelector(".inner");
+
+buttonsWrapper.addEventListener("click", e => {
+  if (e.target.nodeName === "BUTTON") {
+    Array.from(buttonsWrapper.children).forEach(item =>
+      item.classList.remove("active")
+    );
+    if (e.target.classList.contains("first")) {
+      slides.style.transform = "translateX(-0%)";
+      e.target.classList.add("active");
+    } else if (e.target.classList.contains("second")) {
+      slides.style.transform = "translateX(-33.33333333333333%)";
+      e.target.classList.add("active");
+    } else if (e.target.classList.contains('third')){
+      slides.style.transform = 'translatex(-66.6666666667%)';
+      e.target.classList.add('active');
+    }
+  }
+});
+</script>
 </body>
 </html>
