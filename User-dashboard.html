@@ -163,6 +163,52 @@ body {
   z-index: 1;
 }
 
+.uploadcontainer {
+  display: none;
+  position: fixed; /* Stay in place */
+  z-index: 3; /* Sit on top */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px; 
+}
+
+form {
+  width: 500px;
+  margin: auto;
+  margin-bottom: 20px;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+}
+
+input[type="submit"] {
+  background-color:#FFFBA1;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  color: rgb(0, 0, 0);
+  padding: 10px 30px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="button"] {
+  background-color:#f0fffe;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  color: rgb(0, 0, 0);
+  padding: 10px 30px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btns {
+  display: flex;
+  margin-top: 5%;
+}
+
 body > footer {
   position: sticky;
   top: 100vh;
@@ -226,8 +272,19 @@ footer {
     <div id="welcome"><h2>Welcome to your space</h2></div>
     <div class="contentheader-container">
     <div class="mycontent"><h3>My content</h3></div>
-    <div class="upload"><button onclick="document.getElementById('upload').style.display='block'" style="width:auto;">Upload</button></div>
+    <div class="upload"><button onclick="document.getElementById('upload-id').style.display='block'" style="width:auto;">Upload</button></div>
     </div>
+    <div id="upload-id" class="uploadcontainer">
+      <form id="uploadform" action="User-dashboard.html" method="post">
+        <input type="file" id="myFile" name="filename">
+        <input type="submit">
+        <div id="cancelbtn"><button type="button" onclick="document.getElementById('upload-id').style.display='none'" class="cancelbtn">Cancel</button></div>
+      </form>
+    </div>
+
+    <section id="uploaded-content">
+    </section>
+
   </main>
 
   <footer>
@@ -241,5 +298,13 @@ footer {
     </div>
   </footer>
 
+  <script>
+    const uploadcontainer = document.getElementById('upload-id');
+    window.onclick = function(event) {
+      if (event.target == uploadcontainer) {
+        uploadcontainer.style.display = "none";
+      }
+}
+  </script>
   </body>
   </html>
