@@ -94,5 +94,21 @@
                 </div>
         </footer>
         <script src='Homejsscript.js'></script>
+
+        <script> 
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', 'http://127.0.0.1:5501/Home.html');
+            
+            xhr.onload = function() {
+              if (xhr.status === 200) {
+                console.log(xhr.responseText);
+              }
+              else {
+                console.log('Request failed.  Returned status of ' + xhr.status);
+              }
+            };
+            
+            xhr.send();
+        </script>
     </body>
 </html>
