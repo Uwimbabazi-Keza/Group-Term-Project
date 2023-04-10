@@ -115,14 +115,14 @@ body {
 @media screen and (max-width: 768px) {
   .logonav img {
       width: 30px;
-      height: 27px;
+      height: 20px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .logonav img {
-      width: 60px;
-      height: 55px;
+      width: 30px;
+      height: 30px;
   }
 }
 
@@ -186,7 +186,7 @@ main {
     width: 100%;
     background-color: lightgrey;
     background-image: url("Media/group-five-african-college-students-campus-university-yard-hold-empty-white-blank-free-space-your-text-black-afro-friends-studying.jpg");
-    background-size: 100% 100%;
+    background-size: 100%;
 }
 
 @media only screen and (max-width: 600px) {
