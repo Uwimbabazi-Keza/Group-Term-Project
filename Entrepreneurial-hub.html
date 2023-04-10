@@ -488,6 +488,25 @@ footer {
     margin: 1%;
 }
 
+
+.search-container {
+  position: relative;
+}
+
+label {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.search-icon {
+  font-size: 1.2em;
+  color: #999;
+  cursor: pointer;
+}
+
+
 </style>
 </head>
 <body>
@@ -506,13 +525,14 @@ footer {
                 <a href="#">Finance</a>
                 <a href="#">Career Guidance</a>
               </div>
-            </div>
-            
+            </div> 
             <div class="search-container">
-              <input type="text" placeholder="Search.." name="search">
+              <label for="search-input">
+                <span class="search-icon">&#128269;</span>
+              </label>
+              <input type="text" id="search-input" placeholder="Search..." name="search">
             </div>
             <a href="User-dashboard.html">User</a>
-        </div>
         </div>
       <main> 
           <section class="welcomesection">

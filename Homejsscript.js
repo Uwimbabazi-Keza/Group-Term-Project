@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", ()=> { //Function that toggles between log in and sign up forms
+Zdocument.addEventListener("DOMContentLoaded", ()=> { //Function that toggles between log in and sign up forms
     const loginForm = document.querySelector("#log-in-account");
     const signupForm = document.querySelector("#sign-up-account");
     
