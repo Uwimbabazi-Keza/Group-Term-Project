@@ -6,19 +6,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* Media query for small screens */
-@media only screen and (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
-}
 
-/* Media query for large screens */
-@media only screen and (min-width: 1200px) {
-  body {
-    font-size: 18px;
-  }
-}
 
 .nav-bar {
   position: fixed;
@@ -32,43 +20,14 @@ body {
   z-index: 1;   
 }
 
-/* Media query for small screens */
-@media only screen and (max-width: 600px) {
-  .nav-bar {
-    position: static;
-    margin: 5%;
-    background-color: #F4FFFE;
-    box-shadow: none;
-    z-index: 1;
-  }
-}
 
-/* Media query for large screens */
-@media only screen and (min-width: 1200px) {
-  .nav-bar {
-    position: fixed;
-    margin: 0%;
-    top: 0;
-    left: 0;
-    right: 0;
-    max-width:inherit; 
-    background-color: #F4FFFE;
-    box-shadow: 0px 10px 70px 0px rgb(46, 46, 46);
-    z-index: 1;
-  }
-}
 
 .nav {
   display: flex;
   justify-content: flex-end;
 }
 
-@media screen and (max-width: 768px) {
-  .nav {
-    flex-direction: column;
-    align-items: center;
-  }
-}
+
 
 .nav-bar a {
   float: left;
@@ -79,32 +38,14 @@ body {
   font-size: 16px;
 }
 
-@media only screen and (max-width: 600px) {
-  .nav-bar a {
-  float: none;
-  display: block;
-  text-align: left;
-  padding: 10px;
-  font-size: 14px;
-  }
-  }
+
 
 .logonav {
     position: absolute; 
     top: 10%;
 }
 
-@media screen and (max-width: 768px) {
-  .logonav {
-      top: 5%;
-  }
-}
 
-@media screen and (min-width: 1200px) {
-  .logonav {
-      top: 20%;
-  }
-}
 
 .logonav img {
     border-radius:50%;
@@ -112,52 +53,21 @@ body {
     height: 37px; 
 }
 
-@media screen and (max-width: 768px) {
-  .logonav img {
-      width: 30px;
-      height: 20px;
-  }
-}
 
-@media screen and (min-width: 1200px) {
-  .logonav img {
-      width: 30px;
-      height: 30px;
-  }
-}
+
 
 .nav a {
   padding: 14px 50px 18px 50px;
    
 }
 
-@media screen and (max-width: 768px) {
-  .nav a {
-    padding: 10px 25px 14px 25px;
-  }
-}
 
-@media screen and (min-width: 1200px) {
-  .nav a {
-    padding: 18px 75px 22px 75px;
-  }
-}
 
 .nav-bar a:hover {
   background-color: #ddd;
 }
- 
-@media screen and (max-width: 768px) {
-  .nav-bar a:hover {
-    background-color: #ccc;
-  }
-}
 
-@media screen and (min-width: 1200px) {
-  .nav-bar a:hover {
-    background-color: #eee;
-  }
-}
+
 
 main {
   position: relative;
@@ -165,18 +75,7 @@ main {
   max-width: 100%;  
 } 
 
-@media screen and (max-width: 768px) {
-  main {
-    margin: 0 5%;
-  }
-}
 
-@media screen and (min-width: 1200px) {
-  main {
-    max-width: 80%;
-    margin: 0 auto;
-  }
-}
 
 /* The Modal (background) */
 .header-section {
@@ -189,21 +88,7 @@ main {
     background-size: 100%;
 }
 
-@media only screen and (max-width: 600px) {
-  .header-section {
-  height: 400px;
-  background-size: cover;
-  background-position: center;
-  }
-  }
-  
-  @media only screen and (min-width: 601px) {
-  .header-section {
-  height: 1000px;
-  background-size: 100% 100%;
-  background-position: top;
-  }
-  }
+
 
 form {
     background-color:#fbffca;
@@ -219,21 +104,6 @@ form {
     text-align: center;
 }
 
-/* Styles for screens smaller than 768px */
-@media (max-width: 767px) {
-  form {
-      width: 90%;
-      left: 5%;
-  }
-}
-
-/* Styles for screens larger than 768px */
-@media (min-width: 768px) {
-  form {
-      width: 43%;
-      left: 32%;
-  }
-}
 
 .formtitle {
     margin: 0;
@@ -288,15 +158,7 @@ button:hover {
   font-size: 80%;
 }
 
-@media screen and (max-width: 768px) {
-  .container {
-    width: 90%;
-    height: 90%;
-    padding: 40px;
-    left: 5%;
-    font-size: 60%;
-  }
-}
+
 
 .remember-me-and-forget-psw {
   display: flex;
@@ -305,13 +167,7 @@ button:hover {
   top: 20%;
 }
 
-@media screen and (max-width: 768px) {
-  .remember-me-and-forget-psw {
-    flex-direction: column;
-    align-items: center;
-    top: 0;
-  }
-}
+
 
 .checkbx {
   position: relative;
@@ -323,12 +179,7 @@ div.psw {
   
 }
 
-@media screen and (max-width: 300px) {
- div .psw {
-    display: flex;
-    float: none;
-  }
-}
+
 
 .who_are_we {
     background-color: #150F2F;
@@ -336,21 +187,7 @@ div.psw {
     margin-top: -3%;
 }
 
-/* Styles for screens smaller than 768px */
-@media only screen and (max-width: 767px) {
-  .who_are_we {
-    padding: 10% 5%;
-    margin-top: -10%;
-  }
-}
 
-/* Styles for screens larger than 768px */
-@media only screen and (min-width: 768px) {
-  .who_are_we {
-    padding: 5% 15% 20% 15%;
-    margin-top: -3%;
-  }
-}
 
 
 .who_are_we-block {
@@ -365,27 +202,7 @@ div.psw {
   
 }
 
-/* Styles for screens smaller than 768px */
-@media only screen and (max-width: 767px) {
-  .who_are_we-block {
-    padding: 10% 5%;
-    font-size: 100%;
-  }
-}
 
-/* Styles for screens larger than 768px */
-@media only screen and (min-width: 768px) {
-  .who_are_we-block {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    padding: 19% 9% 5% 9%;
-    font-size: 120%;
-    height: 0.5%;
-  }
-}
 
 
 .who_are_we-title {
@@ -397,24 +214,7 @@ div.psw {
     margin-bottom: 1rem; 
 }
 
-/* Styles for screens smaller than 768px */
-@media only screen and (max-width: 767px) {
-  .who_are_we-title {
-    font-size: 30px;
-  }
-}
 
-/* Styles for screens larger than 768px */
-@media only screen and (min-width: 768px) {
-  .who_are_we-title {
-    color: white;
-    text-align: center;
-    font-size: 50px;
-    font-weight: 500; 
-    font-family: 'futura', sans-serif;
-    margin-bottom: 1rem; 
-  }
-}
 
 
 .how_it_works {
@@ -424,22 +224,8 @@ div.psw {
     
 }
 
-/* Styles for screens smaller than 768px */
-@media only screen and (max-width: 767px) {
-  .how_it_works {
-    padding: 10% 5%;
-    margin-top: -10%;
-  }
-}
 
-/* Styles for screens larger than 768px */
-@media only screen and (min-width: 768px) {
-  .how_it_works {
-    background-color: #f0f5f5;
-    padding: 5% 15% 20% 15%;
-    margin-top: -3%;
-  }
-}
+
 
 
 .how_it_works-title {
@@ -451,24 +237,7 @@ div.psw {
     margin-bottom: 1rem;   
 }
 
-/* Styles for screens smaller than 768px */
-@media only screen and (max-width: 767px) {
-  .how_it_works-title {
-    font-size: 30px;
-  }
-}
 
-/* Styles for screens larger than 768px */
-@media only screen and (min-width: 768px) {
-  .how_it_works-title {
-    color: black;
-    text-align: center;
-    font-size: 50px;
-    font-weight: 500; 
-    font-family: 'futura', sans-serif;
-    margin-bottom: 1rem;
-  }
-}
 
 
 .how_it_works-block {
@@ -482,26 +251,7 @@ div.psw {
    color: black;  
 }
 
-/* Styles for screens smaller than 768px */
-@media only screen and (max-width: 767px) {
-  .how_it_works-block {
-    padding: 50% 10%;
-  }
-}
 
-/* Styles for screens larger than 768px */
-@media only screen and (min-width: 768px) {
-  .how_it_works-block {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding: 19% 9% 5% 9%;
-    font-size: 120%;
-    height: 0.5%;
-    color: black;  
-  }
-}
 
 .meet_team {
    background-color: white;
@@ -511,24 +261,6 @@ div.psw {
    margin-top: -2rem;
 }
 
-/* Styles for screens smaller than 768px */
-@media only screen and (max-width: 767px) {
-  .meet_team {
-    padding: 10%;
-    margin-top: -4rem;
-  }
-}
-
-/* Styles for screens larger than 768px */
-@media only screen and (min-width: 768px) {
-  .meet_team {
-    background-color: white;
-    padding: 2%;
-    display: flex;
-    flex-direction: column;
-    margin-top: -2rem;
-  }
-}
 
 
 .team_title {
@@ -541,26 +273,7 @@ div.psw {
     
 }
 
-/* Styles for screens smaller than 768px */
-@media only screen and (max-width: 767px) {
-  .team_title {
-    font-size: 28px;
-    line-height: 32px;
-    padding: 1rem;
-  }
-}
 
-/* Styles for screens larger than 768px */
-@media only screen and (min-width: 768px) {
-  .team_title {
-    position: relative;
-    align-self: center;
-    padding: 2rem;
-    font-weight: 300;
-    font-family: 'futura', sans-serif;
-    line-height: 40px;
-  }
-}
 
 .team_block {
   display: flex;
@@ -568,21 +281,7 @@ div.psw {
   justify-content: center;
 }
 
-/* Styles for screens smaller than 768px */
-@media only screen and (max-width: 767px) {
-  .team_block {
-    flex-direction: column;
-  }
-}
 
-/* Styles for screens larger than 768px */
-@media only screen and (min-width: 768px) {
-  .team_block {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-}
 
 .member {
   width: 25%;
@@ -593,44 +292,12 @@ div.psw {
   align-items: center;
 }
 
-/* Styles for screens smaller than 768px */
-@media only screen and (max-width: 767px) {
-  .member {
-    width: 100%;
-    margin-bottom: 3rem;
-  }
-}
-
-/* Styles for screens larger than 768px */
-@media only screen and (min-width: 768px) {
-  .member {
-    width: 25%;
-    margin-bottom: 7rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-}
 
 
 .member img {
   max-width: 80%;
 }
 
-/* Styles for screens smaller than 768px */
-@media only screen and (max-width: 767px) {
-  .member img {
-    max-width: 100%;
-  }
-}
-
-/* Styles for screens larger than 768px */
-@media only screen and (min-width: 768px) {
-  .member img {
-    max-width: 80%;
-  }
-}
 
 
 .member h3 {
@@ -642,26 +309,7 @@ div.psw {
   text-align: center;
 }
 
-/* Styles for screens smaller than 768px */
-@media only screen and (max-width: 767px) {
-  .member h3 {
-    font-size: 16px;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
-}
 
-/* Styles for screens larger than 768px */
-@media only screen and (min-width: 768px) {
-  .member h3 {
-    font-weight: 900;
-    font-size: 18px;
-    font-family: 'futura', sans-serif;
-    margin-top: 1rem;
-    margin-bottom: 0.2rem;
-    text-align: center;
-  }
-}
 
 .member p {
   font-family: 'futura', sans-serif;
@@ -669,23 +317,6 @@ div.psw {
   font-size: 16px; 
 }
 
-/* Styles for screens smaller than 768px */
-@media only screen and (max-width: 767px) {
-  .member p {
-    font-size: 14px;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
-}
-
-/* Styles for screens larger than 768px */
-@media only screen and (min-width: 768px) {
-  .member p {
-    font-family: 'futura', sans-serif;
-    text-align: center;
-    font-size: 16px;
-  }
-}
 
 
 footer {
@@ -702,30 +333,6 @@ footer {
    
 }
 
-/* Styles for screens smaller than 768px */
-@media only screen and (max-width: 767px) {
-  footer {
-    padding: 1rem;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-}
-
-/* Styles for screens larger than 768px */
-@media only screen and (min-width: 768px) {
-  footer {
-    background-color: black;
-    margin-bottom: -2rem;
-    margin-left: -0.5rem;
-    margin-right: -0.5rem;
-    margin-top: 6rem;
-    padding: 2rem;
-    color: white;
-    display: flex;
-    max-height: 100%;
-  }
-}
 
 .youngcapabletag {
   flex-grow: 100;
@@ -733,17 +340,7 @@ footer {
   margin-top: 1%;  
 }
 
-@media only screen and (max-width: 768px) {
-  .youngcapabletag {
-    text-align: center;
-  }
-}
 
-@media only screen and (min-width: 1200px) {
-  .youngcapabletag {
-    text-align: right;
-  }
-}
 
     
 .socials {
@@ -751,18 +348,8 @@ footer {
     margin-top: 1.5%;
 }
 
-@media screen and (max-width: 768px) {
-  .socials {
-      flex-grow: 1;
-      margin-top: 0;
-  }
-}
+
 
 .socials a {
     margin: 7;
-}
-@media screen and (max-width: 768px) {
-  .socials a {
-      margin: 0;
-  }
 }
