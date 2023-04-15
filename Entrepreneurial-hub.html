@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Entrepreneurial Hub</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <style>
 * {
 box-sizing: border-box;
@@ -13,8 +14,16 @@ body {
 }
 
 main {
-  
   background-color: white;
+}
+
+.material-symbols-outlined {
+  color: #5c5c5c;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 200,
+  'GRAD' 0,
+  'opsz' 48
 }
 
 .navbar {
@@ -180,7 +189,6 @@ main {
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
   user-select: none;
 }
 
@@ -430,6 +438,33 @@ input[type=submit]:hover {
 	 font-size: 0.9rem;
 	 font-weight: 300;
 }
+
+/* Next & previous buttons for learning content carousel */
+.prev02, .next02 {
+  cursor: pointer;
+  position: relative;
+  top: 50;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next02 {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev02:hover, .next02:hover {
+  background-color:#f0fffe;
+}
+
  .map {
 	 margin-top: 1em;
 }
@@ -525,14 +560,17 @@ label {
                 <a href="#">Finance</a>
                 <a href="#">Career Guidance</a>
               </div>
-            </div> 
+              </div> 
             <div class="search-container">
               <label for="search-input">
-                <span class="search-icon">&#128269;</span>
+                <span class="material-symbols-outlined">
+                  search
+                </span>
               </label>
               <input type="text" id="search-input" placeholder="Search..." name="search">
             </div>
             <a href="User-dashboard.html">User</a>
+            </div>
         </div>
       <main> 
           <section class="welcomesection">
@@ -764,6 +802,10 @@ label {
       </div>
           </div>
         </div>
+
+        <div class="prev02" onclick="plusSlides02(-1)">❮</a>
+        <a class="next02" onclick="plusSlides02(1)">❯</a>
+
     </div>
         
         <div class="map">
