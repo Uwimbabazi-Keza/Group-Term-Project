@@ -470,26 +470,6 @@ footer {
   }
     
   
-  
-  {
-  const deleteButtons = document.querySelectorAll('.delete-button');
-  deleteButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const postId = button.dataset.postId;
-      fetch(`/posts/${postId}`, { method: 'DELETE' })
-        .then(response => {
-          if (response.ok) {
-            // remove the post from the DOM
-            const article = button.closest('article');
-            article.remove();
-          } else {
-            // handle error
-          }
-        });
-    });
-  });
-  }
-  
   </script>
 </body>
 </html>
