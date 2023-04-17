@@ -1,0 +1,89 @@
+
+
+/* Global Styles  Form */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	background-color: #f2f2f2;
+}
+
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+}
+
+main {
+	max-width: 600px;
+	margin: 20px auto;
+	padding: 20px;
+	background-color: #fff;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+label {
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+	padding: 10px;
+	border-radius: 5px;
+	border: none;
+	margin-bottom: 15px;
+	background-color: #f2f2f2;
+}
+
+input[type="submit"] {
+	background-color: #333;
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+input[type="submit"]:hover {
+	background-color: #555;
+}
+
+footer {
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+
+
+/*  static contacts   */
+
+.contacts-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .contact-info {
+    margin: 50px;
+    text-align: center;
+  }
+  
+
