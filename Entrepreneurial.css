@@ -255,7 +255,12 @@
     form {
       width: 500px;
       margin: auto;
+<<<<<<< HEAD
       background-color: white;
+=======
+      margin-bottom: 20px;
+      background-color: red;
+>>>>>>> 50b7780e975d86aae6595ff6d16db8494d1f9122
       padding: 20px;
       box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
     }
@@ -316,7 +321,7 @@
       position: relative;
       top: 380px;
       left: 12.5%;
-      background-color: #FFFBA1;
+      background-color:#FFFBA1;
       border-radius: 25px;
       border: none;
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
@@ -336,7 +341,7 @@
     }
     
     .btns [type="button"] {
-      background-color:#f0fffe;
+      background-color:red;
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
       color: rgb(0, 0, 0);
       padding: 10px 30px;
@@ -511,3 +516,7 @@
       right: 10px;
       transform: translateY(-50%);
     }
+
+
+    
+    
