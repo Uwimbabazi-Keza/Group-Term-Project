@@ -238,43 +238,6 @@
       .prev, .next,.text {font-size: 11px}
     }
     
-    .form-container {
-      display: none; /* Hidden by default */
-      position: fixed; /* Stay in place */
-      z-index: 3; /* Sit on top */
-      left: 0;
-      top: 0;
-      width: 100%; /* Full width */
-      height: 100%; /* Full height */
-      overflow: auto; /* Enable scroll if needed */
-      background-color: rgb(0,0,0); /* Fallback color */
-      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-      padding-top: 60px;  
-    } 
-    
-    form {
-      width: 500px;
-      margin: auto;
-<<<<<<< HEAD
-      background-color: white;
-=======
-      margin-bottom: 20px;
-      background-color: red;
->>>>>>> 50b7780e975d86aae6595ff6d16db8494d1f9122
-      padding: 20px;
-      box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
-    }
-    
-    #registerhere {
-      color:white;
-      text-align: center;
-      font-size: 40px;
-      font-weight: 500px;
-      background-color:#150F2F;
-      padding: 10%;
-      margin: -20px -20px 0px;
-    }
-    
     label {
       display: block;
       margin-bottom: 20px;
@@ -319,6 +282,8 @@
     
     #register {
       position: relative;
+      color: black;
+      text-decoration: none;
       top: 380px;
       left: 12.5%;
       background-color:#FFFBA1;
