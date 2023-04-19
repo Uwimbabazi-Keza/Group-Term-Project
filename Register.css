@@ -1,13 +1,11 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-image: url("Media/part2-group-five-african-college-students-spending.jpg");
-  background-size: 100%;
-  background-repeat: no-repeat;
+  background-color: #150F2F;
+  
 }
 
 .title {
-  background-image: linear-gradient(to bottom, rgb(1, 19, 24), rgba(2, 2, 14, 0));
   position: fixed;
   margin: 0;
   top: 0;
@@ -35,7 +33,6 @@ form {
     margin: auto;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
     background-color: white;
-    
   }
    
   label {
@@ -56,7 +53,7 @@ form {
     font-family: sans-serif;
     width: 100%;
     box-sizing: border-box;
-    opacity: 1;
+    
   }
   
   input[type="submit"] {
@@ -82,7 +79,6 @@ form {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    opacity: 0.9;
   }
   
 
