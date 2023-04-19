@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Us</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="Register.css">
+</head>
+<body>
+    <h1>Youth andCapable </h1>
+	<p>Thank you for your interest in our program. Please register below to indicate your seminar preferences.</p>
+	
+	<main>
+		<form action="https://formspree.io/f/mrgvowge" method="POST">
+            
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your name.." required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your email.." required>
+            
+            <label for="seminar">Choose a seminar:</label>
+            <select id="seminar" name="seminar" required>
+                <option value="">--Please choose a seminar--</option>
+                <option value="Seminar A">Seminar A</option>
+                <option value="Seminar B">Seminar B</option>
+                <option value="Seminar C">Seminar C</option>
+            </select>
+            
+            <input type="submit" value="Submit">
+        </form>
+	</main>
+	
+	<footer>
+		<p>&copy; 2023 youngandcapable. All Rights Reserved.</p>
+	</footer>
+	
+	<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+	<script>
+	  window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+	  formbutton("setup",{
+	    action: "https://formspree.io/Astrobooysen2@gmail.com",
+	    buttonSelector: "#submit",
+	    embed: "inline",
+	    onSuccess: function (event) {
+	      event.target.parentElement.innerHTML = "<p>Thank you for your message!</p>";
+	    }
+	  });
+	</script>
+      
+</body>
+</html>
