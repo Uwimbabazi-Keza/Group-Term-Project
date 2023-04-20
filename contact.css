@@ -15,9 +15,10 @@ body {
 }
 
 header {
-	background-color: #333;
+	background-color: #150F2F;
 	color: #fff;
 	padding: 20px;
+	text-align: center;
 }
 
 main {
@@ -49,8 +50,8 @@ textarea {
 }
 
 input[type="submit"] {
-	background-color: #333;
-	color: #fff;
+	background-color: #FFFBA1;
+	color: #000000;
 	padding: 10px 20px;
 	border-radius: 5px;
 	border: none;
@@ -63,7 +64,7 @@ input[type="submit"]:hover {
 }
 
 footer {
-	background-color: #333;
+	background-color:#150F2F;
 	color: #fff;
 	padding: 10px;
 	text-align: center;

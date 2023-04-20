@@ -1,7 +1,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #150F2F;
+  background-color: #f2f2f2;
   
 }
 
@@ -14,7 +14,7 @@ body {
   color: white;
   z-index: 1;
   text-align: center;
-
+  background-color: #150F2F;
 }
 
 p {
@@ -84,7 +84,7 @@ form {
 
   footer {
 	background-color: #150F2F;
-	color: #fff;
+	color: white;
 	padding: 10px;
 	text-align: center;
 	position: fixed;
