@@ -142,37 +142,55 @@ body {
 }
 
 .nav-bar {
-  position: relative;
-  margin: 0%;
-  top: 5%;
-  left: 0;
-  right: 0;
-  width:100%; 
-  z-index: 1;   
-}
-
-.nav {
   display: flex;
-  justify-content: flex-end;
+  position: relative;
+  align-items: center;
+  padding-top: var(--dl-space-space-threeunits);
+  padding-bottom: var(--dl-space-space-threeunits);
+  justify-content: space-between;
+  top: 5%;
+  width:100%; 
+  max-width: 1440px;
 }
 
-.nav-bar a {
-  float: left;
+.nav  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--dl-space-space-twounits);
+  transition: 0.3s;
+}
+
+.nav a {
+  gap: var(--dl-space-space-threeunits);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
   color: rgb(255, 255, 255);
-  text-align: center;
-  padding: 1px 18px;
   text-decoration: none;
   font-size: 16px;
 }
 
 .logonav {
-    position: absolute; 
+    position: relative;
     top: 10%;
     left: 2%;
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: row;
+    font-size: 22px;
+}
+
+.logonav h3 {
+  margin-top: 2px;
+  margin-left: 5px;
 }
 
 .logonav img {
-    width: 50px; 
+    width: 40px; 
+    border-radius: 50px;
 }
 
 .nav a {
