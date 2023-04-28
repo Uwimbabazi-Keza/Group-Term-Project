@@ -10,147 +10,129 @@ body {
   max-width: 100%;
   margin: 0%;
   font-family: Arial, sans-serif;
-  background-color: #bbbbbba4;
+  background-color: #ffffffa4;
 }
 
 
-.navbar {
-  position: fixed;
-  z-index: 2;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: 0; 
-  background-color: #F4FFFE;
-  box-shadow: 0px 2px 2px 0px #B6B6B6;   
-}
+.home-content {
+      flex: 1;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    
+    .search-container, input {
+      position: relative; 
+      width: 150px;
+      margin-right: 30px;
+      padding: 4px 10px;
+      border: none;
+    }
 
-.nav {
-  display: flex;
-  justify-content:space-between;
-}
+    #search-input {
+      width: 100px;
+    }
 
-.nav a {
-  float: left;
-  color: black;
-  text-align: center;
-  padding: 1px 18px;
-  text-decoration: none;
-  font-size: 16px;
-}
+    .search-container {
+      border: 1px solid grey;
+      border-radius: 20px;
+    }
 
-.logonav {
-  position: relative;
-}
-
-.logonav img {
-    border-radius:50%;
-    width: 37px;
-    height: 34px;
-    margin: -20%;   
-}
-
-.nav a {
-  padding: 20px 50px 15px 50px;
-}
-
-.nav a:hover {
-  background-color: #ddd;
-}
-
-.nav a:visited {
-  background-color: #ddd;
-}
-
-.nav .search-container{
-  float: right; 
-}
-
-.nav input[type=text] {
-  padding: 5px;
-  margin-top: 16px;
-  font-size: 15px;
-  border-style: solid;
-  border-width: thin;
-  border-color: #B6B6B6;
-}
-
-@media screen and (max-width: 600px) {
-  .nav a, .nav input[type=text], .nav .search-container button {
-    float: none;
-    display: block;
-    text-align: left;
-    width: 100%;
-    margin: 0;
-    padding: 14px;
-  }
-
-  .nav input[type=text] {
-    border: 1px solid #ccc;  
-  }
-}
-
-.dropbtn {
-  background-color: #F4FFFE;
-  border: none;
-  margin: 0;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 90%;
-  background-color: #150F2F;
-  min-width: 200px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: -1;
-}
-
-.dropdown-content a {
-  color: white;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: justify;
-  z-index: 1;
-  
-}
-
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-  color: black;
-}
-
-.dropdown:hover .dropdown-content {
-  display: flex;
-  flex-direction: column;
-}
+    .nav-bar {
+      display: flex;
+      position: fixed;
+      align-items: center;
+      padding-top: var(--dl-space-space-fourunits);
+      padding-bottom: var(--dl-space-space-threeunits);
+      justify-content: space-between;
+      top: 0px;
+      width:100%; 
+      z-index: 100;
+      background-color: #ffffff;
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+    }
+    
+    .nav  {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: var(--dl-space-space-twounits);
+      transition: 0.3s;
+      width: auto;
+    }
+    
+    .nav a, button {
+      gap: var(--dl-space-space-threeunits);
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: center;
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+      font-size: 16px;
+    }
+    
+    .nav button {
+      background-color: white;
+      border-radius: 3px;
+      border: 1.5px solid;
+      padding: 7px;
+      margin-right: 40px;
+      text-align: center;
+      width: 100px;
+    }
+    
+    .logonav {
+        position: relative;
+        top: 7px;
+        left: 2%;
+        color: rgb(0, 0, 0);
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        flex-direction: row;
+        font-size: 22px;
+    }
+    
+    .logonav h3 {
+      margin-top: 2px;
+      margin-left: 5px;
+      color: rgb(0, 0, 0);
+    }
+    
+    .logonav img {
+        width: 40px; 
+        border-radius: 50px;
+    }
+    
+    .nav a {
+      padding: 14px 50px 18px 10px;
+    }
 
 #welcome {
    width: fit-content;
    position: relative;
-   top: 80px;
-   left: 8%;
-   font-size: 22px;
-   padding-bottom: 1%;  
+   margin-top: 150px;
+   margin-left: 100px;
+   font-size: 22px;  
 }
 
 .contentheader-container {
   display: flex;
   flex-direction: row;
-  margin-top: 90px;
-  margin-left: 140px;
+  margin-top: 20px;
+  margin-left: 100px;
   width:fit-content;
+  border-bottom: 1px solid grey;
 }
 .mycontent {
    width: fit-content;
-   font-size: 22px;
-   padding-bottom: 1%;  
+   font-size: 22px; 
 }
 
 .upload{
   margin-left: 830px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .upload button {
@@ -158,7 +140,7 @@ body {
   background-color: #FFFBA1;
   border-radius: 25px;
   border: none;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
   padding: 15px 35px;
   cursor: pointer;
   z-index: 1;
@@ -183,25 +165,8 @@ form {
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
 }
 
-input[type="submit"] {
-  background-color:#FFFBA1;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-  color: rgb(0, 0, 0);
-  padding: 10px 30px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
 
-button[type="button"] {
-  background-color:#f0fffe;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-  color: rgb(0, 0, 0);
-  padding: 10px 30px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
+
 
 .btns {
   display: flex;
@@ -301,59 +266,48 @@ body > footer {
 }
 
 footer {
-  background-color: #150F2F;
-  padding: 2rem;
-  color: white;
-  padding: 2rem;
-  display: flex;
-  height: 20%;
-  border-top: white;  
-}
-
-.youngcapabletag  {
-  flex-grow: 17;
-  text-align: left;
-  margin-top: 1%;
-  font-size: 20px;  
-}
+      background-color: #021d1fe1;
+      color: white;
+      display: flex;
+      width: 100%;
+    }
     
-.socials {
-    flex-direction: column;
-    flex-grow: 1;
-    margin-top: 1.5% 
-}
-
-.socials a {
-    margin: 1%;
-}
+    .youngcapabletag {
+      flex-grow: 100;
+      text-align: left;
+      margin-top: 1%; 
+      margin-left: 10px;
+      font-size: 15px;
+    }
+    
+    .socials {
+        flex-grow: 2;
+        margin-top: 1.5%;
+    }
+    
+    .socials a {
+        margin: 7;
+    }
 
 </style>
 </head>
 <body>
-  <div class="navbar">
-    <div class = "nav">
-      <a href="Home.html" class = "logonav"><img src="Media/Young.png" alt="logo"/></a>
-        <a href="Opportunity-Board.html">Opportunity Board</a>
-        <a href="Discussion_forum.html">Discussion Forum</a>
-        
-        <div class="dropdown">
-        <div class="dropbtn"><a href="Entrepreneurial-hub.html">Learning Hub</a></div>
-          <div class="dropdown-content">
-            <a href="Entrepreneurial-hub.html">Recorded Seminars</a>
-            <a href="#">Development</a>
-            <a href="#">Marketing</a>
-            <a href="#">Business</a>
-            <a href="#">Finance</a>
-            <a href="#">Career Guidance</a>
-          </div>
+  <div class="home-content">
+    <div class="nav-bar">
+        <div class = "logonav">
+          <a href="Home.html"><img src="Media/Young.png" alt="logo" /></a>
+          <h3>Y&C</h3>
         </div>
-        
-        <div class="search-container">
-          <input type="text" placeholder="Search.." name="search">
+        <div class = "nav">
+            <a href="OppBoard.html">Opportunity Board</a>
+            <a href="Discussion_forum.html">Discussion Forum</a>
+            <div class="search-container">
+              <input type="text" id="search-input" placeholder="Search..." name="search">
+            </div>
+            <a href="Entrepreneurial-hub.html">Learning Hub</a>
+            </div>
         </div>
-        <a href="User-dashboard.html">User</a>
-    </div>
-    </div>
+        </div>
   <main>
     <div id="welcome"><h2>Welcome to your space</h2></div>
     <div class="contentheader-container">
@@ -363,7 +317,7 @@ footer {
     <div id="upload-id" class="uploadcontainer">
       <form id="uploadform" action="User-dashboard.html" method="post">
         <input type="file" id="myFile" name="filename">
-        <input type="submit">
+        <button><input type="submit"></button>
         <div id="cancelbtn"><button type="button" onclick="document.getElementById('upload-id').style.display='none'" class="cancelbtn">Cancel</button></div>
       </form>
     </div>
@@ -533,12 +487,12 @@ footer {
 
   <footer>
     <div class="youngcapabletag">
-            <p>@youngandcapable</p>
+            <p>© 2023 Young and Capable. All Rights Reserved.</p>
     </div>
     <div class="socials">
-         <a href="Home.html"><img src="Media/Facebook_White.svg" width="40px" height="40px"></a>
-         <a href="Home.html"><img src="Media/Twitter_White.svg" width="40px" height="40px"></a>
-         <a href="Home.html"><img src="Media/Instagram_White.svg" width="40px" height="40px"></a>
+         <a href="Home.html"><img src="Media/Facebook_White.svg" width="20" height="30"></a>
+         <a href="Home.html"><img src="Media/Twitter_White.svg" width="20" height="30"></a>
+         <a href="Home.html"><img src="Media/Instagram_White.svg" width="20" height="30"></a>
     </div>
   </footer>
 

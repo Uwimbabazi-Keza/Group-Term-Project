@@ -4,6 +4,7 @@
   <title>Discussion Forum</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
 body {
   margin: 0%;
@@ -12,144 +13,106 @@ body {
   background-color: #bbbbbba4;
 }
 
-.navbar {
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: 0; 
-  background-color: #F4FFFE;
-  box-shadow: 0px 2px 2px 0px #B6B6B6;   
-}
-
-.nav {
-  display: flex;
-  justify-content:space-between;
-}
-
-.nav a {
-  float: left;
-  color: black;
-  text-align: center;
-  padding: 1px 18px;
-  text-decoration: none;
-  font-size: 16px;
-}
-
-.logonav {
-  position: relative;
-}
-
-.logonav img {
-    border-radius:50%;
-    width: 37px;
-    height: 34px;
-    margin: -20%;   
-}
-
-.nav a {
-  padding: 20px 50px 15px 50px;
-}
-
-.nav a:hover {
-  background-color: #ddd;
-}
-
-.nav a:visited {
-  background-color: #ddd;
-}
-
-.nav .search-container{
-  float: right; 
-}
-
-.nav input[type=text] {
-  padding: 5px;
-  margin-top: 16px;
-  font-size: 15px;
-  border-style: solid;
-  border-width: thin;
-  border-color: #B6B6B6;
-}
-
-@media screen and (max-width: 600px) {
-  .nav a, .nav input[type=text], .nav .search-container button {
-    float: none;
-    display: block;
-    text-align: left;
+.home-content {
+    flex: 1;
     width: 100%;
-    margin: 0;
-    padding: 14px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
 
-  .nav input[type=text] {
-    border: 1px solid #ccc;  
+.nav-bar {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    padding-top: var(--dl-space-space-threeunits);
+    padding-bottom: var(--dl-space-space-threeunits);
+    justify-content: space-between;
+    top: 0px;
+    width:100%; 
+    max-width: 1440px;
+    background-color: white;
+    z-index: 100;
   }
-}
-
-.dropbtn {
-  background-color: #F4FFFE;
-  border: none;
-  margin: 0;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 90%;
-  background-color: #150F2F;
-  min-width: 200px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: -1;
-}
-
-.dropdown-content a {
-  color: white;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: justify;
-  z-index: 1;
   
-}
+  .nav  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--dl-space-space-twounits);
+    transition: 0.3s;
+  }
+  
+  .nav a, button {
+    gap: var(--dl-space-space-threeunits);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .nav button {
+    background-color: white;
+    border-radius: 3px;
+    border: 1.5px solid;
+    padding: 7px;
+    margin-right: 40px;
+    text-align: center;
+    width: 100px;
+    cursor: pointer;
+  }
+  
+  .logonav {
+      position: relative;
+      top: 7px;
+      left: 2%;
+      color: rgb(0, 0, 0);
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: row;
+      font-size: 22px;
+  }
+  
+  .logonav h3 {
+    margin-top: 2px;
+    margin-left: 5px;
+  }
+  
+  .logonav img {
+      width: 40px; 
+      border-radius: 50px;
+  }
+  
+  .nav a {
+    padding: 14px 50px 18px 10px;  
+  }
+  
+  .new-post-container {
+    background-color: #F8F0E9;
+    margin-top: -3%;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: var(--dl-space-space-threeunits);
+    justify-content: center;
+    height: 800px;
+  }
 
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-  color: black;
-}
-
-.dropdown:hover .dropdown-content {
-  display: flex;
-  flex-direction: column;
-}
-    main {
-      margin: 0 auto;
-      padding: 5px;
-      padding-top: 5%;
-    }
-    
-    main h1 {
-			padding-bottom: 1%; 
-			width: fit-content;
-			margin-top: 60px;
-			margin-left: 150px;
-      font-size: 40px;
-    }
-    
     form {
       position: relative;
-      left: 18%;
-      margin-bottom: 20px;
       box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      width: 50%;
-      padding: 6%;
+      margin-top: 200px;
+      width: 30%;
+      height: 300px;
+      padding: 3% 4% 4% 4%;
       background-color: white;
     }
 
     form h2 {
       color: #392881;
-      font-size: 27px;
+      font-size: 25px;
     }
     
     label {
@@ -165,13 +128,14 @@ body {
     input[type="text"],
     textarea {
       width: 97%;
+      height: 10px;
       padding: 10px;
       border: 1px solid black;
       resize: none;
     }
     
   textarea {
-    height: 170px;
+    height: 60px;
   }
 
     button[type="submit"] {
@@ -183,7 +147,7 @@ body {
       border-radius: 25px;
       box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
       cursor: pointer;
-      width: 70px;
+      width: 60px;
       height: 30px;
       font-size: 12px;
       padding: 0px 10px;
@@ -199,7 +163,7 @@ body {
       box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
       cursor: pointer;
       margin-right: 2%;
-      width: 70px;
+      width: 60px;
       height: 30px;
       font-size: 12px;
       padding: 0px 10px;
@@ -217,18 +181,37 @@ body {
       margin: 3% 0% 0% 5%;
     }
     
+   #post-list {
+    gap: var(--dl-space-space-fourunits);
+    background-color: #fafafa;
+    padding: 5% 15% 20% 15%;
+    margin-top: -3%;
+    padding-top: var(--dl-space-space-threeunits);
+    padding-left: var(--dl-space-space-fiveunits);
+    padding-right: var(--dl-space-space-fiveunits);
+    padding-bottom: var(--dl-space-space-threeunits);
+    text-align:start;
+    justify-content: start;
+    height: 100%;
+   }
+
     #post-list h2 {
       font-size: 35px;
+      margin-left: 70px;
     }
     article {
+      margin-left: 50px;
+      margin-right: 50px;
       margin-bottom: 20px;
       border: 1px solid black;
       border-radius: 4px;
       padding: 10px;
-      background:#ccc;
+      background:#dadada;
       color: black;
+      text-decoration: ;
     }
     
+
 button.reply-button {
     margin-left: 10px;
     border: none;
@@ -254,74 +237,58 @@ button.like-button {
   cursor: pointer;
   margin-left: 10px;
 }
-
-.delete-button:hover {
-  background-color: darkred;
+  
+.divButton {
+  display: flex;
+  flex-direction: row;
 }
-      
+
 body > footer {
   position: sticky;
   top: 100vh;
 }
 
 footer {
-  background-color: #150F2F;
-  padding: 2rem;
-  color: white;
-  padding: 2rem;
-  display: flex;
-  height: 20%;
-  border-top: white;  
-}
-
-.youngcapabletag  {
-  flex-grow: 17;
-  text-align: left;
-  margin-top: 1%;
-  font-size: 20px;  
-}
-    
-.socials {
-    flex-direction: column;
-    flex-grow: 1;
-    margin-top: 1.5% 
-}
-
-.socials a {
-    margin: 1%;
-}
+    background-color: #021d1fe1;
+    color: white;
+    display: flex;
+  }
+  
+  .youngcapabletag {
+    flex-grow: 100;
+    text-align: left;
+    margin-top: 1%; 
+    margin-left: 10px;
+    font-size: 15px;
+  }
+  
+  .socials {
+      flex-grow: 2;
+      margin-top: 1.5%;
+  }
+  
+  .socials a {
+      margin: 7;
+  }
     </style>
 </head>
 <body>
-  <div class="navbar">
-    <div class = "nav">
-      <a href="Home.html" class = "logonav"><img src="Media/Young.png" alt="logo"/></a>
-        <a href="Opportunity-Board.html">Opportunity Board</a>
-        <a href="Discussion_forum.html">Discussion Forum</a>
-        
-        <div class="dropdown">
-        <div class="dropbtn"><a href="Entrepreneurial-hub.html">Learning Hub</a></div>
-          <div class="dropdown-content">
-
-            <a href="Entrepreneurial-hub.html">Recorded Seminars</a>
-            <a href="#">Development</a>
-            <a href="#">Marketing</a>
-            <a href="#">Business</a>
-            <a href="#">Finance</a>
-            <a href="#">Career Guidance</a>
-          </div>
+  <div class="home-content">
+    <div class="nav-bar">
+        <div class = "logonav">
+          <a href="Home.html"><img src="Media/Young.png" alt="logo" /></a>
+          <h3>Y&C</h3>
         </div>
-        
-        <div class="search-container">
-          <input type="text" placeholder="Search.." name="search">
+        <div class = "nav">
+            <a href="OppBoard.html">Opportunity Board</a>
+            <a href="Entrepreneurial-hub.html">Learning Hub</a>
+            <button id="upload-button">Post</button>
         </div>
-        <a href="User-dashboard.html">User</a>
-    </div>
-    </div>
+        </div>
+   </div>
     <main>
-      
-      <h1>Start a Discussion</h1>
-      
+    
+    <div class="new-post-container">
       <form id="post-form">
         <h2>New Post</h2>
         <label for="post-title">Title:</label>
@@ -333,30 +300,29 @@ footer {
           <button type="reset">Cancel</button>
         </div>
        </form>
-      
-      <section id="post-list">
+    </div>
+      <div id="post-list">
         <div>
         <h2>Discussions</h2>
         </div>
-      </section>
+      </div>
     
     </main>
   
-  <footer>
-  <div class="youngcapabletag">
-          <p>@youngandcapable</p>
-  </div>
-  <div class="socials">
-    <a href="Home.html"><img src="Media/Facebook_White.svg" width="40px" height="40px"></a>
-    <a href="Home.html"><img src="Media/Twitter_White.svg" width="40px" height="40px"></a>
-    <a href="Home.html"><img src="Media/Instagram_White.svg" width="40px" height="40px"></a>
-</div>
-</footer>
+    <footer>
+      <div class="youngcapabletag">
+              <p>© 2023 Young and Capable. All Rights Reserved.</p>
+      </div>
+      <div class="socials">
+           <a href="Home.html"><img src="Media/Facebook_White.svg" width="20" height="30"></a>
+           <a href="Home.html"><img src="Media/Twitter_White.svg" width="20" height="30"></a>
+           <a href="Home.html"><img src="Media/Instagram_White.svg" width="20" height="30"></a>
+      </div>
+  </footer>
     
 <script>
   const postForm = document.getElementById('post-form');
-  const postList = document.getElementById('post-list');
-  
+  const postList = document.getElementById('post-list')
   postForm.addEventListener('submit', event => {
     event.preventDefault();
     const title = event.target.elements['post-title'].value;
