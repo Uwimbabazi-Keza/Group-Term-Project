@@ -7,10 +7,15 @@
   
 </head>
 <body>
-    <div class="navbar">
+
+    <div class="home-content">
+    <div class="nav-bar">
+        <div class = "logonav">
+          <a href="Home.html"><img src="Media/Young (1).png" alt="logo" /></a>
+          <h3>Y&C</h3>
+        </div>
         <div class = "nav">
-          <a href="Home.html" class = "logonav"><img src="Media/Young.png" alt="logo"/></a>
-            <a href="Opportunity-Board.html">Opportunity Board</a>
+            <a href="OppBoard.html">Opportunity Board</a>
             <a href="Discussion_forum.html">Discussion Forum</a>
             <div class="dropdown">
             <div class="dropbtn"><a href="Entrepreneurial-hub.html">Learning Hub</a></div>
@@ -24,28 +29,23 @@
               </div>
               </div> 
             <div class="search-container">
-              <label for="search-input">
-
-                <span class="material-symbols-outlined">
-                  search
-                </span>
-              </label>
               <input type="text" id="search-input" placeholder="Search..." name="search">
             </div>
             <a href="User-dashboard.html">User</a>
             </div>
         </div>
       
-      <main> 
-        <section class="welcomesection">
+      <main>
+        <div class = bodycontainer> 
+        <div class="welcomesection">
           <div id="welcomee">
-            <h2 id="welcome">Welcome to the Entrepreneurial Hub</h2>
+            <h2 id="welcome">Welcome to the Hub</h2>
           </div>
-          <a href="register.html" id="register">Register</a>
-          <!-- Add your registration form below -->
-          </div>
-    
-    <section class="slideshow-section"> 
+          <div class = "reg"><a href="register.html" id="register">Register</a></div>
+        </div>
+
+          
+      <div class = ".slideshow-section">
       <div class="slideshow-container">
         <div class="mySlides fade">
           <div class="content-container"><div class="imgcontainer"><img src="Media/fred.jpeg"></div>
@@ -72,10 +72,11 @@
           </div></div>
         </div>
         
+        
         <a class="prev" onclick="plusSlides(-1)">❮</a>
         <a class="next" onclick="plusSlides(1)">❯</a>
-        
         </div>
+
         <br>
         
         <div style="text-align:center">
@@ -83,11 +84,11 @@
           <span class="dot" onclick="currentSlide(2)"></span> 
           <span class="dot" onclick="currentSlide(3)"></span> 
         </div>
-    </section>
+      
   </div>
-    </section>    
+  </div>    
 
-    <section id="learning-content-carousel">
+    <div id="learning-content-carousel">
       <div class="carousel-title"><h1>Interested in learning more?</h1></div>
       <div class="center">
           <div class="wrapper">
@@ -241,19 +242,20 @@
           <a class="next02" onclick="plusSlides02(1)">❯</a>
   
       </div>
+      </div>
       
 </main>
 
 <footer>
-    <div class="youngcapabletag">
-            <p>@youngandcapable</p>
-    </div>
-    <div class="socials">
-         <a href="Home.html"><img src="Media/Facebook_White.svg" width="40px" height="40px"></a>
-         <a href="Home.html"><img src="Media/Twitter_White.svg" width="40px" height="40px"></a>
-         <a href="Home.html"><img src="Media/Instagram_White.svg" width="40px" height="40px"></a>
-    </div>
-  </footer>
+  <div class="youngcapabletag">
+          <p>© 2023 Young and Capable. All Rights Reserved.</p>
+  </div>
+  <div class="socials">
+       <a href="Home.html"><img src="Media/Facebook_White.svg" width="20" height="30"></a>
+       <a href="Home.html"><img src="Media/Twitter_White.svg" width="20" height="30"></a>
+       <a href="Home.html"><img src="Media/Instagram_White.svg" width="20" height="30"></a>
+  </div>
+</footer>
 
 <script>
 
@@ -287,7 +289,7 @@ function showSlides(n) {
 
 </script>
 
-//toggle buttons to move learning resources carousel
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </script>
